@@ -6,6 +6,7 @@ import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
+import { TypeAnimation } from "react-type-animation";
 
 const links = [
   { name: "home", link: "/" },
@@ -42,9 +43,9 @@ const Header = () => {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 300
+      windowHeight > 200
         ? setActiveNav(
-            "fixed top-0 left-0 w-full bg-primary lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
+            "fixed top-0 left-0 w-full bg-primary bg-opacity-60 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
           )
         : setActiveNav("");
     }
@@ -132,11 +133,24 @@ const Header = () => {
           className={`${activeNav} text-neutral py-6 lg:px-28 md:px-12 sm:px-8 px-4`}
         >
           <div className="flex justify-between items-center">
-            <h1 className="uppercase text-xl">Mohammad Awlad</h1>
+            <Link href={"/"}>
+              <h1
+                className={`uppercase text-xl font-bold ${
+                  activeNav ? "text-neutral" : "text-primary"
+                }`}
+              >
+                Mohammad Awlad
+              </h1>
+            </Link>
             <div className="lg:block hidden">
               <ul className="flex items-center gap-6 uppercase">
                 {links.map((link) => (
-                  <li key={link.name} className="">
+                  <li
+                    key={link.name}
+                    className={`${
+                      activeNav ? "" : "hover:text-primary"
+                    } duration-300 ease-in-out`}
+                  >
                     <Link href={link.link}>{link.name}</Link>
                   </li>
                 ))}
@@ -166,6 +180,33 @@ const Header = () => {
             onClick={() => setExpandedMenu(false)}
             className="text-xl mt-3 cursor-pointer"
           />
+        </div>
+        {/*---- Hero Details ----*/}
+        <div className="flex justify-center items-center h-full text-neutral px-4">
+          <div className="text-center font-bold md:text-3xl text-2xl">
+            <h1>HI !</h1>
+            <h2 className="uppercase" style={{ letterSpacing: ".2em" }}>
+              {`i'm`} <span className="text-primary">mohammad awlad</span>
+            </h2>
+            <TypeAnimation
+              sequence={["Frontend Web Developer_", 4000, "Freelancer_", 4000]}
+              wrapper="span"
+              speed={10}
+              style={{
+                fontSize: "0.5em",
+                letterSpacing: ".3em",
+                fontWeight: 500,
+                display: "inline-block",
+              }}
+              repeat={Infinity}
+            />
+            {/*---- Button ----*/}
+            <Link href={"#about"} className="block mt-4">
+              <button className="border border-neutral rounded-full animate-bounce w-5 h-12 text-3xl text-primary">
+                &#129043;
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

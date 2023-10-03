@@ -1,14 +1,14 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import dynamic from "next/dynamic";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin-ext"] });
 const Layout = dynamic(() => import("@/components/Layouts/Layout"), {
   ssr: false,
 });
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Mohammad Awlad",
   description: "My personal portfolio website.",
 };
 
