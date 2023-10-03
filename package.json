@@ -1,5 +1,6 @@
 {
   "name": "personal_portfolio",
+  "description": "My personal portfolio website.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
