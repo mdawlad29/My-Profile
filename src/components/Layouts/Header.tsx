@@ -56,7 +56,7 @@ const Header = () => {
       <div
         style={{
           backgroundColor: "#222222",
-          height: "70vh",
+          height: "80vh",
         }}
       >
         <Particles
@@ -65,6 +65,11 @@ const Header = () => {
           loaded={particlesLoaded}
           options={{
             fpsLimit: 120,
+            style: {
+              width: "100%",
+              height: "80vh",
+              position: "absolute",
+            },
             interactivity: {
               events: {
                 onClick: {
@@ -113,7 +118,7 @@ const Header = () => {
                   enable: true,
                   area: 800,
                 },
-                value: 80,
+                value: 70,
               },
               opacity: {
                 value: 0.2,
@@ -171,7 +176,11 @@ const Header = () => {
         >
           <ul className="uppercase">
             {links.map((link) => (
-              <li key={link.name} className="my-2">
+              <li
+                key={link.name}
+                className="my-2"
+                onClick={() => setExpandedMenu(false)}
+              >
                 <Link href={link.link}>{link.name}</Link>
               </li>
             ))}
