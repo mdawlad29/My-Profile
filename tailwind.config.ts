@@ -17,17 +17,20 @@ const config: Config = {
         primary:"#0866FF",
         // primary:"#03A84E",
         secondary:"#ED1C24",
+        "secondary-50":"#222222",
         accent:"#263170",
         neutral:"#fff"
       },
       textColor:{
-        primary:"#00A34F",
+        primary:"#0866FF",
+        // primary:"#03A84E",
         secondary:"#ED1C24",
         accent:"#263170",
         neutral:"#fff"
       },
       borderColor:{
-        primary:"#00A34F",
+         primary:"#0866FF",
+        // primary:"#03A84E",
         secondary:"#ED1C24",
         accent:"#263170",
         neutral:"#fff"
