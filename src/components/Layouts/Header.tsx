@@ -10,7 +10,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const links = [
   { name: "home", link: "/" },
-  { name: "about", link: "/about" },
+  { name: "about", link: "#about" },
   { name: "service", link: "/service" },
   { name: "skills", link: "/skill" },
   { name: "projects", link: "/project" },
@@ -45,7 +45,7 @@ const Header = () => {
       let windowHeight = window.scrollY;
       windowHeight > 200
         ? setActiveNav(
-            "fixed top-0 left-0 w-full bg-primary bg-opacity-60 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
+            "fixed top-0 left-0 w-full bg-primary bg-opacity-70 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
           )
         : setActiveNav("");
     }
@@ -56,7 +56,7 @@ const Header = () => {
       <div
         style={{
           backgroundColor: "#222222",
-          height: "80vh",
+          height: "70vh",
         }}
       >
         <Particles

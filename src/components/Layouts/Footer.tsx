@@ -3,8 +3,13 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className="bg-secondary-50 py-6 lg:px-28 md:px-12 sm:px-8 px-4 text-center">
-        <h1>Copyright &#copy; All desing</h1>
+      <div className="bg-secondary-50 text-neutral capitalize py-4 lg:px-28 md:px-12 sm:px-8 px-4 text-center text-sm">
+        <p>
+          copyright &copy; all rights reserved by{" "}
+          <span className="text-primary font-bold">
+            mohammad awlad <span>-</span> 2023
+          </span>
+        </p>
       </div>
     </>
   );
