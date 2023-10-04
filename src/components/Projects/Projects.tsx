@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
@@ -17,13 +17,13 @@ const FeaturedProject = ({
   type: string;
   title: string;
   summary: string;
-  img: string;
+  img: StaticImageData;
   link: string;
   github: string;
 }) => {
   return (
     <article className="grid lg:grid-cols-2 grid-cols-1 lg:gap-6 gap-3 items-center rounded-xl shadow-xl md:px-5 px-3 md:py-8 py-5 relative bg-neutral border border-gray-300">
-      <div className="absolute top-0 -right-2 -z-10 w-[100%] lg:h-[103%] h-[102%] rounded-xl bg-black" />
+      <div className="absolute top-0 -right-2 -z-10 w-[100%] lg:h-[103%] h-[102%] rounded-xl bg-gray-700" />
       <Link
         href={link}
         target="_blank"
@@ -68,21 +68,19 @@ const FeaturedProject = ({
 const Project = ({
   type,
   title,
-  summary,
   img,
   link,
   github,
 }: {
   type: string;
   title: string;
-  summary: string;
-  img: string;
+  img: StaticImageData;
   link: string;
   github: string;
 }) => {
   return (
     <article className="rounded-xl shadow-xl md:p-5 p-3 border border-gray-300  relative bg-neutral">
-      <div className="absolute top-0 -right-2 -z-10 w-[100%] h-[102%] rounded-xl bg-black" />
+      <div className="absolute top-0 -right-2 -z-10 w-[100%] h-[102%] rounded-xl bg-gray-700" />
       <Link
         href={link}
         target="_blank"

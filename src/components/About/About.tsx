@@ -14,15 +14,15 @@ const About = () => {
         id="about"
         className="grid md:grid-cols-3 grid-cols-1 gap-3 lg:pt-20 md:pt-16 pt-10"
       >
-        <div className="md:col-span-1 relative">
-          <div className="absolute top-0 -right-2 -z-10 w-[102%] h-[102%] bg-black" />
+        <div className="md:col-span-1 relative rounded-lg">
+          <div className="absolute top-1 -right-2 -z-10 w-[100%] h-[101%] bg-gray-700 rounded-lg" />
           <Image
             src={AboutImg}
             alt="About Image"
             width={"0"}
             height={"0"}
             priority
-            className="h-full object-cover"
+            className="h-full object-cover rounded-lg"
           />
         </div>
         <div className="md:col-span-2 lg:px-10 md:px-6 sm:px-4 px-2 py-3">
