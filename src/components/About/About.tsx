@@ -14,7 +14,8 @@ const About = () => {
         id="about"
         className="grid md:grid-cols-3 grid-cols-1 gap-3 lg:pt-20 md:pt-16 pt-10"
       >
-        <div className="md:col-span-1 border-8 border-accent">
+        <div className="md:col-span-1 relative">
+          <div className="absolute top-0 -right-2 -z-10 w-[102%] h-[102%] bg-black" />
           <Image
             src={AboutImg}
             alt="About Image"
