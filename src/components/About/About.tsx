@@ -47,9 +47,7 @@ const About = () => {
                 {/*----- Left ------*/}
                 <div>
                   <div className="flex items-center gap-2">
-                    <h4 className="text-accent text-sm font-bold w-20">
-                      Name
-                    </h4>
+                    <h4 className="text-accent text-sm font-bold w-20">Name</h4>
                     <h2>:</h2>
                     <h4 className="text-sm">Md Awlad</h4>
                   </div>
