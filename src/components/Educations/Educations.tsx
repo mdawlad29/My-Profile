@@ -29,7 +29,9 @@ const Details = ({
         transition={{ duration: 1, type: "spring" }}
         className="space-y-2"
       >
-        <h3 className="capitalize text-accent font-semibold md:text-xl text-lg">{position}</h3>
+        <h3 className="capitalize text-accent font-semibold md:text-xl text-lg">
+          {position}
+        </h3>
         <p className="capitalize text-sm">{institute}</p>
         <p className="capitalize text-sm">{studyName}</p>
         <p className="capitalize text-sm">{year}</p>

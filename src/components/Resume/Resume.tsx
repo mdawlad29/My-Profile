@@ -3,6 +3,9 @@ import Link from "next/link";
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 import dynamic from "next/dynamic";
+import { RiGraduationCapFill } from "react-icons/ri";
+import { MdWork } from "react-icons/md";
+import { BiLinkExternal } from "react-icons/bi";
 const LiIcon = dynamic(() => import("../Shared/LiIcon"), {
   ssr: false,
 });
@@ -40,9 +43,9 @@ const Details = ({
         <Link
           href={companyLink}
           target="_blank"
-          className="capitalize text-primary font-bold"
+          className="capitalize text-primary font-bold flex items-center gap-2"
         >
-          {company}
+          {company} <BiLinkExternal className="text-primary" />
         </Link>
         <p className="capitalize text-sm">{time}</p>
       </motion.div>
@@ -70,28 +73,44 @@ const Resume = () => {
           <div className="md:w-24 w-16 h-1 mx-auto bg-accent md:mt-2 mt-1" />
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-          <div ref={ref} className="relative">
-            <motion.div
-              style={{ scaleY: scrollYProgress }}
-              className="absolute left-0 top-1 w-1 h-full bg-accent origin-top"
-            />
-            <ul className="w-full">
-              <Details
-                position="Front-end Developer (full time)"
-                company="Marhaba Limited"
-                companyLink="https://marhaba.com.bd/"
-                time="Jun 2023 - present"
+          <div>
+            <div className="flex items-center gap-4 mb-2">
+              <h1 className="md:text-2xl text-xl text-primary font-semibold">
+                Experience
+              </h1>
+              <MdWork className="inline w-7 h-7 text-primary" />
+            </div>
+            <hr className="mb-4" />
+            <div ref={ref} className="relative">
+              <motion.div
+                style={{ scaleY: scrollYProgress }}
+                className="absolute left-0 top-1 w-1 h-full bg-accent origin-top"
               />
-              <Details
-                position="React Developer (full time)"
-                company="Nexis Limited"
-                companyLink="https://www.nexisltd.com/"
-                time="May 2022 - May 2023"
-              />
-            </ul>
+              <ul className="w-full">
+                <Details
+                  position="Front-end Developer (full time)"
+                  company="Marhaba Limited"
+                  companyLink="https://marhaba.com.bd/"
+                  time="Jun 2023 - present"
+                />
+                <Details
+                  position="React Developer (full time)"
+                  company="Nexis Limited"
+                  companyLink="https://www.nexisltd.com/"
+                  time="May 2022 - May 2023"
+                />
+              </ul>
+            </div>
           </div>
           {/*---- Educations -----*/}
           <div>
+            <div className="flex items-center gap-4 mb-2">
+              <h1 className="md:text-2xl text-xl text-primary font-semibold">
+                Education
+              </h1>
+              <RiGraduationCapFill className="inline w-7 h-7 text-primary" />
+            </div>
+            <hr className="mb-4" />
             <Educations />
           </div>
         </div>
