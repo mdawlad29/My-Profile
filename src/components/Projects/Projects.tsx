@@ -176,6 +176,14 @@ const Projects = () => {
             />
           </div>
         </div>
+        <div className="mx-auto text-center mt-12">
+          <Link
+            href={"/online_cv"}
+            className="px-8 py-3 rounded-full bg-primary text-neutral font-semibold hover:bg-accent duration-300 ease-in-out text-sm uppercase"
+          >
+            see more projects
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -8,7 +8,10 @@ const Layout = dynamic(() => import("@/components/Layouts/Layout"), {
 });
 
 export const metadata: Metadata = {
-  title: "Mohammad Awlad",
+  title: {
+    template: "%s | Mohammad Awlad",
+    default: "Mohammad Awlad | Home",
+  },
   description: "My personal portfolio website.",
 };
 
