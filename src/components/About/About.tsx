@@ -1,11 +1,16 @@
+"use client";
 import Image from "next/image";
 import AboutImg from "../../../public/assets/images/about_image.jpeg";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <>
       <div
+        onCopy={(event) => {
+          event.preventDefault();
+        }}
         id="about"
         className="grid md:grid-cols-3 grid-cols-1 gap-3 bg-neutral lg:pt-20 md:pt-16 pt-10"
       >
@@ -108,13 +113,11 @@ const About = () => {
                 <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-8 py-1 rounded-full uppercase">
                   online cv
                 </button>
-
-                <button
-                 
-                  className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-4 py-1 rounded-full uppercase"
-                >
-                  download resume
-                </button>
+                <Link href={"/Frontend-Web-Developer.pdf"} target="_blank">
+                  <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-4 py-1 rounded-full uppercase">
+                    download resume
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

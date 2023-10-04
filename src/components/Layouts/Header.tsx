@@ -7,6 +7,7 @@ import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 const links = [
   { name: "home", link: "/" },
@@ -54,6 +55,9 @@ const Header = () => {
   return (
     <>
       <div
+        onCopy={(event) => {
+          event.preventDefault();
+        }}
         style={{
           backgroundColor: "#222222",
           height: "80vh",
@@ -94,7 +98,7 @@ const Header = () => {
             },
             particles: {
               color: {
-                value: "#fff",
+                value: "#0866FF",
               },
               links: {
                 color: "#fff",
@@ -134,7 +138,17 @@ const Header = () => {
           }}
         />
 
-        <div
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: {
+              delay: 0.7,
+            },
+          }}
+          transition={{ delay: 1 }}
           className={`${activeNav} text-neutral py-6 lg:px-28 md:px-12 sm:px-8 px-4`}
         >
           <div className="flex justify-between items-center">
@@ -167,7 +181,7 @@ const Header = () => {
               className="text-xl lg:hidden block cursor-pointer"
             />
           </div>
-        </div>
+        </motion.div>
         {/*---- Mobile Menu ----*/}
         <div
           className={`${
@@ -191,7 +205,20 @@ const Header = () => {
           />
         </div>
         {/*---- Hero Details ----*/}
-        <div className="flex justify-center items-center h-full text-neutral px-4">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: -80,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          className="flex justify-center items-center h-full text-neutral px-4"
+        >
           <div className="text-center font-bold md:text-3xl text-2xl">
             <h1>HI !</h1>
             <h2 className="uppercase" style={{ letterSpacing: ".2em" }}>
@@ -216,7 +243,7 @@ const Header = () => {
               </button>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
