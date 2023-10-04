@@ -12,11 +12,11 @@ import { motion } from "framer-motion";
 const links = [
   { name: "home", link: "/" },
   { name: "about", link: "#about" },
-  { name: "service", link: "/service" },
-  { name: "skills", link: "/skill" },
-  { name: "projects", link: "/project" },
-  { name: "resume", link: "/resume" },
-  { name: "contact", link: "/contact" },
+  { name: "service", link: "#service" },
+  { name: "skills", link: "#skill" },
+  { name: "projects", link: "#project" },
+  { name: "resume", link: "#resume" },
+  { name: "contact", link: "#contact" },
 ];
 
 const Header = () => {

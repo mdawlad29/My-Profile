@@ -2,7 +2,7 @@
 import Image from "next/image";
 import AboutImg from "../../../public/assets/images/about_image.jpeg";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { BiLinkExternal } from "react-icons/bi";
 
 const About = () => {
   return (
@@ -12,9 +12,9 @@ const About = () => {
           event.preventDefault();
         }}
         id="about"
-        className="grid md:grid-cols-3 grid-cols-1 gap-3 bg-neutral lg:pt-20 md:pt-16 pt-10"
+        className="grid md:grid-cols-3 grid-cols-1 gap-3 lg:pt-20 md:pt-16 pt-10"
       >
-        <div className="md:col-span-1 border-8 border-secondary">
+        <div className="md:col-span-1 border-8 border-accent">
           <Image
             src={AboutImg}
             alt="About Image"
@@ -29,7 +29,7 @@ const About = () => {
             <h1 className="md:text-4xl text-2xl italic font-semibold">
               About Me
             </h1>
-            <div className="md:w-24 w-16 h-1 bg-secondary md:mt-2 mt-1"></div>
+            <div className="md:w-24 w-16 h-1 bg-accent md:mt-2 mt-1"></div>
             <div className="lg:space-y-5 space-y-3 lg:pt-14 pt-4">
               <p className="text-justify text-sm font-medium">
                 I am Md. Awlad, A frontend web developer. I can do any kind of
@@ -47,21 +47,21 @@ const About = () => {
                 {/*----- Left ------*/}
                 <div>
                   <div className="flex items-center gap-2">
-                    <h4 className="text-secondary text-sm font-bold w-20">
+                    <h4 className="text-accent text-sm font-bold w-20">
                       Name
                     </h4>
                     <h2>:</h2>
                     <h4 className="text-sm">Md Awlad</h4>
                   </div>
                   <div className="flex items-center gap-2">
-                    <h4 className="text-secondary text-sm font-bold w-20">
+                    <h4 className="text-accent text-sm font-bold w-20">
                       Education
                     </h4>
                     <h2>:</h2>
                     <h4 className="text-sm">Diploma in Computer</h4>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
-                    <h4 className="text-secondary text-sm font-bold w-20">
+                    <h4 className="text-accent text-sm font-bold w-20">
                       Email
                     </h4>
                     <h2>:</h2>
@@ -76,7 +76,7 @@ const About = () => {
                 {/*----- Right -----*/}
                 <div>
                   <div className="flex items-center gap-2">
-                    <h4 className="text-secondary text-sm font-bold w-20">
+                    <h4 className="text-accent text-sm font-bold w-20">
                       Phone
                     </h4>
                     <h2>:</h2>
@@ -88,7 +88,7 @@ const About = () => {
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <h4 className="text-secondary text-sm font-bold w-20">
+                    <h4 className="text-accent text-sm font-bold w-20">
                       Address
                     </h4>
                     <h2>:</h2>
@@ -100,7 +100,7 @@ const About = () => {
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <h4 className="text-secondary text-sm font-bold w-20">
+                    <h4 className="text-accent text-sm font-bold w-20">
                       Hobby
                     </h4>
                     <h2>:</h2>
@@ -110,14 +110,18 @@ const About = () => {
               </div>
               {/*----- Button ------*/}
               <div className="flex items-center gap-4 lg:pt-5">
+                <Link
+                  href={"/Frontend-Web-Developer.pdf"}
+                  download={true}
+                  target="_blank"
+                >
+                  <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-4 py-1 rounded-full uppercase flex items-center gap-2">
+                    resume <BiLinkExternal />
+                  </button>
+                </Link>
                 <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-8 py-1 rounded-full uppercase">
                   online cv
                 </button>
-                <Link href={"/Frontend-Web-Developer.pdf"} target="_blank">
-                  <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-4 py-1 rounded-full uppercase">
-                    download resume
-                  </button>
-                </Link>
               </div>
             </div>
           </div>

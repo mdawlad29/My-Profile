@@ -31,6 +31,9 @@ const config: Config = {
         accent:"#263170",
         neutral:"#fff"
       },
+       backgroundImage: {
+        'circle': 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #fff 5px, #fff 100px)',
+      },
     },
   },
   plugins: [],
