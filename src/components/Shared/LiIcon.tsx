@@ -9,7 +9,7 @@ const LiIcon = ({ reference }: { reference: React.RefObject<any> }) => {
   });
   return (
     <>
-      <figure className="absolute left-0 stroke-[#263170]">
+      <figure className="absolute -left-9 stroke-[#263170]">
         <svg
           className="-rotate-90"
           width={"75"}

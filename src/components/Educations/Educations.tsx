@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "../Shared/LiIcon";
@@ -30,7 +29,7 @@ const Details = ({
         transition={{ duration: 1, type: "spring" }}
         className="space-y-2"
       >
-        <h3 className="capitalize font-semibold text-xl">{position}</h3>
+        <h3 className="capitalize font-semibold md:text-xl text-lg">{position}</h3>
         <p className="capitalize text-sm">{institute}</p>
         <p className="capitalize text-sm">{studyName}</p>
         <p className="capitalize text-sm">{year}</p>
@@ -51,7 +50,7 @@ const Educations = () => {
       <div ref={ref} className="relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-1 w-1 h-full bg-accent origin-top"
+          className="absolute left-0 top-1 w-1 h-full bg-accent origin-top"
         />
         <ul className="w-full">
           <Details

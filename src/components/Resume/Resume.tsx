@@ -34,7 +34,7 @@ const Details = ({
         transition={{ duration: 1, type: "spring" }}
         className="space-y-2"
       >
-        <h3 className="capitalize font-semibold text-xl">{position}</h3>
+        <h3 className="capitalize font-semibold md:text-xl text-lg">{position}</h3>
         <Link
           href={companyLink}
           target="_blank"
@@ -68,7 +68,7 @@ const Resume = () => {
           <div ref={ref} className="relative">
             <motion.div
               style={{ scaleY: scrollYProgress }}
-              className="absolute left-9 top-1 w-1 h-full bg-accent origin-top"
+              className="absolute left-0 top-1 w-1 h-full bg-accent origin-top"
             />
             <ul className="w-full">
               <Details
