@@ -27,10 +27,10 @@ const About = () => {
         </div>
         <div className="md:col-span-2 lg:px-10 md:px-6 sm:px-4 px-2 py-3">
           <div>
-            <h1 className="md:text-4xl text-2xl italic font-semibold">
+            <h1 className="text-accent md:text-4xl text-2xl italic font-semibold">
               About Me
             </h1>
-            <div className="md:w-24 w-16 h-1 bg-accent md:mt-2 mt-1"></div>
+            <div className="md:w-24 w-16 h-1 bg-accent md:mt-2 mt-1"/>
             <div className="lg:space-y-5 space-y-3 lg:pt-14 pt-4">
               <p className="text-justify text-sm font-medium">
                 I am Md. Awlad, A frontend web developer. I can do any kind of

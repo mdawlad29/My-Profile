@@ -25,9 +25,12 @@ const Skills = () => {
         id="skill"
         className="lg:pt-20 md:pt-16 pt-10"
       >
-        <h1 className="text-center md:text-4xl text-2xl italic font-semibold">
-          My Skills
-        </h1>
+        <div className="lg:mb-10 md:mb-7 mb-4">
+          <h1 className="text-accent text-center md:text-4xl text-2xl italic font-semibold">
+            My Skills
+          </h1>
+          <div className="md:w-24 w-16 h-1 mx-auto bg-accent md:mt-2 mt-1" />
+        </div>
         <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circle">
           <motion.div
             className="flex items-center justify-center rounded-full font-semibold bg-primary text-neutral shadow-black cursor-pointer lg:p-5 md:p-4 p-2 xs:text-xs"

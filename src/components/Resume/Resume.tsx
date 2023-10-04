@@ -34,7 +34,9 @@ const Details = ({
         transition={{ duration: 1, type: "spring" }}
         className="space-y-2"
       >
-        <h3 className="capitalize font-semibold md:text-xl text-lg">{position}</h3>
+        <h3 className="capitalize text-accent font-semibold md:text-xl text-lg">
+          {position}
+        </h3>
         <Link
           href={companyLink}
           target="_blank"
@@ -61,9 +63,12 @@ const Resume = () => {
         id="resume"
         className="lg:pt-20 md:pt-16 pt-10"
       >
-        <h1 className="text-center md:text-4xl text-2xl italic font-semibold md:mb-12 mb-4">
-          My Resume
-        </h1>
+        <div className="lg:mb-10 md:mb-7 mb-4">
+          <h1 className="text-accent text-center md:text-4xl text-2xl italic font-semibold">
+            My Resume
+          </h1>
+          <div className="md:w-24 w-16 h-1 mx-auto bg-accent md:mt-2 mt-1" />
+        </div>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <div ref={ref} className="relative">
             <motion.div
