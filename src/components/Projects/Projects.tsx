@@ -4,17 +4,18 @@ import Link from "next/link";
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
 import project1 from "../../../public/assets/images/project_1.png";
+import project2 from "../../../public/assets/images/project_2.png";
+import project3 from "../../../public/assets/images/project_3.png";
+import project4 from "../../../public/assets/images/project_4.png";
 import { BiLinkExternal } from "react-icons/bi";
 
 const FeaturedProject = ({
-  type,
   title,
   summary,
   img,
   link,
   github,
 }: {
-  type: string;
   title: string;
   summary: string;
   img: StaticImageData;
@@ -39,13 +40,12 @@ const FeaturedProject = ({
         />
       </Link>
       <div className="">
-        <span className="text-primary font-medium text-xl">{type}</span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-2xl text-accent font-bold">{title}</h2>
         </Link>
         <p className="my-2 font-medium">{summary}</p>
         <div className="mt-2 flex items-center gap-4">
@@ -66,13 +66,11 @@ const FeaturedProject = ({
 };
 
 const Project = ({
-  type,
   title,
   img,
   link,
   github,
 }: {
-  type: string;
   title: string;
   img: StaticImageData;
   link: string;
@@ -96,13 +94,14 @@ const Project = ({
         />
       </Link>
       <div className="mt-2">
-        <span className="text-primary font-medium text-xl">{type}</span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
+          <h2 className="pt-4 text-accent text-left text-2xl font-bold">
+            {title}
+          </h2>
         </Link>
         <div className="mt-2 flex justify-between items-center">
           <Link
@@ -142,7 +141,6 @@ const Projects = () => {
             <FeaturedProject
               img={project1}
               title="Foody"
-              type="Restaurant Project"
               summary="Foody is a restaurant website through which one can know all information about a restaurant and can order food while sitting at the table."
               link="https://vault-frontend-coral.vercel.app/"
               github="https://github.com/mdawlad29/vault-frontend"
@@ -151,31 +149,28 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-12 gap-4">
             <div>
               <Project
-                img={project1}
-                title="Foody"
-                type="Restaurant Project"
-                link="https://vault-frontend-coral.vercel.app/"
-                github="https://github.com/mdawlad29/vault-frontend"
+                img={project2}
+                title="Bondhu Health"
+                link="https://bondhuhealth.netlify.app/"
+                github="https://github.com/mdawlad29/Bondhu-Health"
               />
             </div>
             <div>
               <Project
-                img={project1}
-                title="Foody"
-                type="Restaurant Project"
-                link="https://vault-frontend-coral.vercel.app/"
-                github="https://github.com/mdawlad29/vault-frontend"
+                img={project4}
+                title="Instance Realestate"
+                link="https://instance-realestate.web.app/"
+                github="https://github.com/mdawlad29/Instance-real-state"
               />
             </div>
           </div>
           <div>
             <FeaturedProject
-              img={project1}
-              title="Foody"
-              type="Restaurant Project"
-              summary="Foody is a restaurant website through which one can know all information about a restaurant and can order food while sitting at the table."
-              link="https://vault-frontend-coral.vercel.app/"
-              github="https://github.com/mdawlad29/vault-frontend"
+              img={project3}
+              title="Intelligent Systems & Solutions Limited"
+              summary="It is an artificial intelligence system that you can order to create software according to your needs. So all information is presented through this site."
+              link="https://intelligentsystemsolution.netlify.app/"
+              github="https://github.com/mdawlad29/intelligentsystemssolutions"
             />
           </div>
         </div>
