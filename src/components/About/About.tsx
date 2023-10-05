@@ -30,7 +30,7 @@ const About = () => {
             <h1 className="text-accent md:text-4xl text-2xl italic font-semibold">
               About Me
             </h1>
-            <div className="md:w-24 w-16 h-1 bg-accent md:mt-2 mt-1"/>
+            <div className="md:w-24 w-16 h-1 bg-accent md:mt-2 mt-1" />
             <div className="lg:space-y-5 space-y-3 lg:pt-14 pt-4">
               <p className="text-justify text-sm font-medium">
                 I am Md. Awlad, A frontend web developer. I can do any kind of
@@ -92,7 +92,8 @@ const About = () => {
                     </h4>
                     <h2>:</h2>
                     <Link
-                      href="https://www.google.com/maps/place/Dhaka/@23.7810672,90.2548737,11z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.804093!4d90.4152376!16zL20vMGZuYjQ?entry=ttu" target="_blank"
+                      href="https://www.google.com/maps/place/Dhaka/@23.7810672,90.2548737,11z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.804093!4d90.4152376!16zL20vMGZuYjQ?entry=ttu"
+                      target="_blank"
                       className="text-sm text-primary"
                     >
                       Dhaka, Bangladesh
@@ -118,9 +119,11 @@ const About = () => {
                     resume <BiLinkExternal />
                   </button>
                 </Link>
-                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-8 py-1 rounded-full uppercase">
-                  online cv
-                </button>
+                <Link href={"/online_cv"}>
+                  <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-8 py-1 rounded-full uppercase">
+                    online cv
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

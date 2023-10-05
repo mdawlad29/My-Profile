@@ -27,7 +27,7 @@ const Contact = () => {
         </div>
         <div className="grid lg:grid-cols-5 grid-cols-1 lg:gap-6 gap-3">
           {/*----- Left -----*/}
-          <div className="lg:col-span-3 p-4 shadow-lg rounded-lg border border-primary">
+          <div className="lg:col-span-3 p-4 shadow-lg rounded-lg border border-gray-200">
             <form className="space-y-2">
               <h2 className="md:text-2xl text-xl text-primary font-bold">
                 Send Message
@@ -39,28 +39,28 @@ const Contact = () => {
                   name=""
                   id=""
                   placeholder="Please type your name"
-                  className="border border-accent px-3 py-2 rounded-md focus:outline-none focus:border-primary"
+                  className="border border-gray-200 px-3 py-2 rounded-md focus:outline-none focus:border-primary"
                 />
                 <input
                   type="email"
                   name=""
                   id=""
                   placeholder="example@gmail.com"
-                  className="border border-accent px-3 py-2 rounded-md focus:outline-none focus:border-primary"
+                  className="border border-gray-200 px-3 py-2 rounded-md focus:outline-none focus:border-primary"
                 />
                 <input
                   type="phone"
                   name=""
                   id=""
                   placeholder="+880 1725385909"
-                  className="border border-accent px-3 py-2 rounded-md focus:outline-none focus:border-primary"
+                  className="border border-gray-200 px-3 py-2 rounded-md focus:outline-none focus:border-primary"
                 />
                 <input
                   type="text"
                   name=""
                   id=""
                   placeholder="please type your subject"
-                  className="border border-accent px-3 py-2 rounded-md focus:outline-none focus:border-primary"
+                  className="border border-gray-200 px-3 py-2 rounded-md focus:outline-none focus:border-primary"
                 />
               </div>
               <textarea
@@ -68,7 +68,7 @@ const Contact = () => {
                 name=""
                 id=""
                 placeholder="Write your message here..."
-                className="border border-accent px-3 py-2 rounded-md focus:outline-none focus:border-primary w-full"
+                className="border border-gray-200 px-3 py-2 rounded-md focus:outline-none focus:border-primary w-full"
               />
               <button
                 onClick={onSubmit}
@@ -81,7 +81,7 @@ const Contact = () => {
             </form>
           </div>
           {/*----- Right -----*/}
-          <div className="lg:col-span-2 p-4 shadow-lg rounded-lg border border-primary">
+          <div className="lg:col-span-2 p-4 shadow-lg rounded-lg border border-gray-200">
             <h2 className="md:text-2xl text-xl text-primary font-bold text-center mb-5">
               Get In Touch
             </h2>
