@@ -31,7 +31,7 @@ const Header = () => {
       let windowHeight = window.scrollY;
       windowHeight > 200
         ? setActiveNav(
-            "fixed top-0 left-0 w-full bg-primary bg-opacity-80 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
+            "fixed top-0 left-0 w-full bg-secondary-50 bg-opacity-80 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
           )
         : setActiveNav("");
     }
@@ -55,7 +55,7 @@ const Header = () => {
             },
           }}
           transition={{ delay: 1 }}
-          className={`${activeNav} text-neutral py-6 lg:px-28 md:px-12 sm:px-8 px-4 bg-[#222222]`}
+          className={`${activeNav} text-neutral py-6 lg:px-28 md:px-12 sm:px-8 px-4 bg-secondary-50`}
         >
           <div className="flex justify-between items-center">
             <Link href={"/"}>
