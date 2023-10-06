@@ -8,6 +8,19 @@ import CvLiIcon from "../Shared/CvLiIcon";
 import { motion, useScroll } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Projects } from "@/Data/ProjectsData";
+import { MdEmail } from "react-icons/md";
+import { BsFacebook, BsGithub, BsTelephoneFill } from "react-icons/bs";
+import reactImg from "../../../public/assets/images/reacticon.png";
+import nextImg from "../../../public/assets/images/nextjs.jpg";
+import jsImg from "../../../public/assets/images/js.png";
+import muiImg from "../../../public/assets/images/mui.png";
+import tailImg from "../../../public/assets/images/tailwind.png";
+import bootImg from "../../../public/assets/images/bootstrap.png";
+import htmlImg from "../../../public/assets/images/html.png";
+import cssImg from "../../../public/assets/images/css.png";
+import nodeImg from "../../../public/assets/images/node.png";
+import mongoImg from "../../../public/assets/images/mongo.png";
+import expressImg from "../../../public/assets/images/express.png";
 
 const Details = ({
   position,
@@ -59,95 +72,224 @@ const OnlineCv = () => {
     <>
       <div
         onCopy={(event) => event.preventDefault()}
-        className="lg:py-20 md:py-16 py-10"
+        className="lg:py-20 md:py-16 py-10 "
       >
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
-          {/*---- Personal Info ----*/}
-          <div className="lg:col-span-1 border border-gray-200 rounded-md p-4">
-            <div className="text-center">
-              <Image
-                src={picture}
-                alt="Awlad"
-                width={"0"}
-                height={"0"}
-                priority
-                className="w-20 h-20 rounded-full object-cover border-2 border-secondary mx-auto"
-              />
-              <h1 className="text-xl font-semibold text-primary mt-2">
-                MD. AWLAD
-              </h1>
-              <p className="text-sm">@Frontend Web Developer</p>
-              <div className="mt-2">
-                <Link href={"https://github.com/mdawlad29"} target="_blank">
-                  <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral text-sm px-3 py-1 rounded-md uppercase">
-                    follow us
-                  </button>
+          <div className="lg:col-span-1 space-y-8">
+            {/*---- Personal Info ----*/}
+            <div className="border border-gray-200 rounded-md p-4">
+              <div className="text-center">
+                <Image
+                  src={picture}
+                  alt="Awlad"
+                  width={"0"}
+                  height={"0"}
+                  priority
+                  className="w-20 h-20 rounded-full object-cover border-2 border-secondary mx-auto"
+                />
+                <h1 className="text-xl font-semibold text-primary mt-2">
+                  MD. AWLAD
+                </h1>
+                <p className="text-sm">@Frontend Web Developer</p>
+                <div className="mt-2">
+                  <Link href={"https://github.com/mdawlad29"} target="_blank">
+                    <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral text-sm px-3 py-1 rounded-md uppercase">
+                      follow us
+                    </button>
+                  </Link>
+                  <Link href={"https://github.com/mdawlad29"} target="_blank">
+                    <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral text-sm px-3 py-1 rounded-md uppercase mx-4">
+                      message
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              {/*---- Description ----*/}
+              <div className="mt-8">
+                <h1 className="uppercase italic text-xl font-semibold text-accent">
+                  About Me
+                </h1>
+                <div className="space-y-3 mt-3">
+                  <p className="text-justify text-sm font-medium">
+                    I am Md. Awlad, A frontend web developer. I can do any kind
+                    of responsive website like portfolio, E-commerce website,
+                    PSD to HTML, Figma to HTML and customization.
+                  </p>
+                  <p className="text-justify text-sm font-medium">
+                    I have professional experience in JavaScript Framework(React
+                    JS), React JS wrapper(Next JS), JavaScript library(React
+                    JS), Frontend toolkit (Tailwind CSS, Material UI,
+                    Bootstrap5, CSS3), HTML5, JavaScript, ES6, API integration.
+                  </p>
+                </div>
+              </div>
+              {/*--- Personal Detail ----*/}
+              <div className="mt-6">
+                <div className="flex items-center gap-2">
+                  <h4 className="text-accent text-sm font-bold w-20">
+                    Full Name
+                  </h4>
+                  <h2>:</h2>
+                  <h4 className="text-sm">Md. Awlad</h4>
+                </div>
+                <div className="flex items-center gap-2">
+                  <h4 className="text-accent text-sm font-bold w-20">Phone</h4>
+                  <h2>:</h2>
+                  <Link
+                    href={"tel:+880 1725385909"}
+                    className="text-sm text-primary"
+                  >
+                    +880 1725385909
+                  </Link>
+                </div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h4 className="text-accent text-sm font-bold w-20">Email</h4>
+                  <h2>:</h2>
+                  <Link
+                    href="mailto:mdawladbdinfo@gmail.com"
+                    className="text-sm text-primary"
+                  >
+                    mdawladbdinfo@gmail.com
+                  </Link>
+                </div>
+                <div className="flex items-center gap-2">
+                  <h4 className="text-accent text-sm font-bold w-20">
+                    Address
+                  </h4>
+                  <h2>:</h2>
+                  <Link
+                    href="https://www.google.com/maps/place/Dhaka/@23.7810672,90.2548737,11z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.804093!4d90.4152376!16zL20vMGZuYjQ?entry=ttu"
+                    target="_blank"
+                    className="text-sm text-primary"
+                  >
+                    Dhaka, Bangladesh
+                  </Link>
+                </div>
+              </div>
+              {/*--- Links ---*/}
+              <div className="text-center mt-8">
+                <Link href={"https://www.facebook.com/awlads"} target="_blank">
+                  <BsFacebook className="inline w-7 h-7 mx-2 text-accent hover:text-primary duration-300 ease-in-out" />
+                </Link>
+                <Link href={"mailto:mdawladbdinfo@gmail.com"}>
+                  <MdEmail className="inline w-7 h-7 mx-2 text-accent hover:text-primary duration-300 ease-in-out" />
                 </Link>
                 <Link href={"https://github.com/mdawlad29"} target="_blank">
-                  <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral text-sm px-3 py-1 rounded-md uppercase mx-4">
-                    message
-                  </button>
+                  <BsGithub className="inline w-7 h-7 mx-2 text-accent hover:text-primary duration-300 ease-in-out" />
+                </Link>
+                <Link href={"tel:+880 1725385909"}>
+                  <BsTelephoneFill className="inline w-7 h-7 mx-2 text-accent hover:text-primary duration-300 ease-in-out" />
                 </Link>
               </div>
             </div>
-            {/*---- Description ----*/}
-            <div className="mt-8">
+            {/*---- Skills ----*/}
+            <div className="border border-gray-200 rounded-md p-4 h-[80vh] space-y-8">
               <h1 className="uppercase italic text-xl font-semibold text-accent">
-                About Me
+                skills
               </h1>
-              <div className="space-y-3 mt-3">
-                <p className="text-justify text-sm font-medium">
-                  I am Md. Awlad, A frontend web developer. I can do any kind of
-                  responsive website like portfolio, E-commerce website, PSD to
-                  HTML, Figma to HTML and customization.
-                </p>
-                <p className="text-justify text-sm font-medium">
-                  I have professional experience in JavaScript Framework(React
-                  JS), React JS wrapper(Next JS), JavaScript library(React JS),
-                  Frontend toolkit (Tailwind CSS, Material UI, Bootstrap5,
-                  CSS3), HTML5, JavaScript, ES6, API integration.
-                </p>
+              {/*--- Frontend ----*/}
+              <div>
+                <h1 className="text-xl font-semibold text-primary mt-2 text-center">
+                  Frontend
+                </h1>
+                <div className="flex items-center flex-wrap gap-10 mt-8">
+                  <Image
+                    src={reactImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={nextImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={jsImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={muiImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={tailImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={bootImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={htmlImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={cssImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                </div>
               </div>
-            </div>
-            {/*--- Personal Detail ----*/}
-            <div className="mt-6">
-              <div className="flex items-center gap-2">
-                <h4 className="text-accent text-sm font-bold w-20">
-                  Full Name
-                </h4>
-                <h2>:</h2>
-                <h4 className="text-sm">Md. Awlad</h4>
-              </div>
-              <div className="flex items-center gap-2">
-                <h4 className="text-accent text-sm font-bold w-20">Phone</h4>
-                <h2>:</h2>
-                <Link
-                  href={"tel:+880 1725385909"}
-                  className="text-sm text-primary"
-                >
-                  +880 1725385909
-                </Link>
-              </div>
-              <div className="flex flex-wrap items-center gap-2">
-                <h4 className="text-accent text-sm font-bold w-20">Email</h4>
-                <h2>:</h2>
-                <Link
-                  href="mailto:mdawladbdinfo@gmail.com"
-                  className="text-sm text-primary"
-                >
-                  mdawladbdinfo@gmail.com
-                </Link>
-              </div>
-              <div className="flex items-center gap-2">
-                <h4 className="text-accent text-sm font-bold w-20">Address</h4>
-                <h2>:</h2>
-                <Link
-                  href="https://www.google.com/maps/place/Dhaka/@23.7810672,90.2548737,11z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.804093!4d90.4152376!16zL20vMGZuYjQ?entry=ttu"
-                  target="_blank"
-                  className="text-sm text-primary"
-                >
-                  Dhaka, Bangladesh
-                </Link>
+              {/*--- Backend ----*/}
+              <div>
+                <h1 className="text-xl font-semibold text-primary mt-2 text-center">
+                  Backend
+                </h1>
+                <div className="flex items-center flex-wrap gap-20 mt-8">
+                  <Image
+                    src={nodeImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={expressImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                  <Image
+                    src={mongoImg}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-12 h-12 object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -192,33 +334,10 @@ const OnlineCv = () => {
               </ul>
             </div>
             {/*----- Projects ------*/}
-            <div>
+            <div className="pt-4">
               <h1 className="uppercase italic text-xl font-semibold text-accent">
                 projects
               </h1>
-              {/* <div className="lg:w-full md:w-full w-[500px] border border-red-600">
-                <div className="overflow-x-scroll">
-                  <div className="flex justify-between items-center">
-                    <h2>Project Name</h2>
-                    <h2>Core Language</h2>
-                    <h2>Project Link</h2>
-                  </div>
-                  {Projects?.map((project: any) => (
-                    <div
-                      key={project?.id}
-                      className="flex justify-between items-center space-y-3"
-                    >
-                      <h2>{project?.name}</h2>
-                      <h2>{project?.language}</h2>
-                      <Link href={project?.link}>
-                        <button className="bg-accent hover:bg-primary duration-300 ease-in-out text-neutral text-sm px-5 py-2 rounded-md">
-                          Click Here
-                        </button>
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div> */}
               <div className="flex flex-wrap -mx-4 mt-4">
                 <div className="w-full px-4">
                   <div className="max-w-full overflow-x-auto">
@@ -240,10 +359,10 @@ const OnlineCv = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        {Projects?.map((project: any) => (
+                        {Projects?.map((project: any, index) => (
                           <tr key={project?.id}>
                             <td className="text-center text-dark font-medium text-base py-2 px-2 bg-[#F3F6FF] border-b border-l border-gray-200">
-                              {project?.id}
+                              {index + 1}
                             </td>
                             <td className="text-center text-dark font-medium text-base py-2 px-2 bg-[#F3F6FF] border-b border-l border-gray-200 capitalize">
                               {project?.name}
@@ -257,7 +376,7 @@ const OnlineCv = () => {
                                 disabled={project?.link === "" ? true : false}
                                 className={`${
                                   project?.link === ""
-                                    ? "bg-gray-300 text-accent text-sm px-5 py-2 rounded-md"
+                                    ? "bg-gray-300 text-accent text-sm px-5 py-2 rounded-md cursor-not-allowed"
                                     : "bg-accent hover:bg-primary duration-300 ease-in-out text-neutral text-sm px-5 py-2 rounded-md"
                                 }`}
                               >
