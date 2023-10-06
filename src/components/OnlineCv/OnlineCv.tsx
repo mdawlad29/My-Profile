@@ -85,7 +85,7 @@ const OnlineCv = () => {
                   width={"0"}
                   height={"0"}
                   priority
-                  className="w-20 h-20 rounded-full object-cover border-2 border-secondary mx-auto"
+                  className="w-20 h-20 rounded-full object-cover border-2 border-secondary mx-auto shadow-xl"
                 />
                 <h1 className="text-xl font-semibold text-primary mt-2">
                   MD. AWLAD
