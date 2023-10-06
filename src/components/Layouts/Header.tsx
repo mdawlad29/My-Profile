@@ -31,7 +31,7 @@ const Header = () => {
       let windowHeight = window.scrollY;
       windowHeight > 200
         ? setActiveNav(
-            "fixed top-0 left-0 w-full bg-secondary-50 bg-opacity-80 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
+            "fixed top-0 left-0 w-full bg-[#222222] bg-opacity-80 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
           )
         : setActiveNav("");
     }
