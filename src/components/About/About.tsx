@@ -110,6 +110,11 @@ const About = () => {
               </div>
               {/*----- Button ------*/}
               <div className="flex items-center gap-4 lg:pt-5">
+                <Link href={"/online_cv"} target="_blank">
+                  <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-8 py-1 rounded-full uppercase">
+                    online cv
+                  </button>
+                </Link>
                 <Link
                   href={"/Frontend-Web-Developer.pdf"}
                   download={true}
@@ -117,11 +122,6 @@ const About = () => {
                 >
                   <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-4 py-1 rounded-full uppercase flex items-center gap-2">
                     resume <BiLinkExternal />
-                  </button>
-                </Link>
-                <Link href={"/online_cv"} target="_blank">
-                  <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-8 py-1 rounded-full uppercase">
-                    online cv
                   </button>
                 </Link>
               </div>

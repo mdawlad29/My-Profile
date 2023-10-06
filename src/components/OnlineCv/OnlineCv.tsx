@@ -97,7 +97,7 @@ const OnlineCv = () => {
                       follow us
                     </button>
                   </Link>
-                  <Link href={"https://github.com/mdawlad29"} target="_blank">
+                  <Link href={"https://www.messenger.com/t/100078916504555"}>
                     <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral text-sm px-3 py-1 rounded-md uppercase mx-4">
                       message
                     </button>
