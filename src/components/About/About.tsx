@@ -119,7 +119,7 @@ const About = () => {
                     resume <BiLinkExternal />
                   </button>
                 </Link>
-                <Link href={"/online_cv"}>
+                <Link href={"/online_cv"} target="_blank">
                   <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-8 py-1 rounded-full uppercase">
                     online cv
                   </button>

@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero/Hero";
 import dynamic from "next/dynamic";
 const About = dynamic(() => import("@/components/About/About"), { ssr: false });
 const Services = dynamic(() => import("@/components/Services/Services"), {
@@ -19,9 +20,10 @@ const Contact = dynamic(() => import("@/components/Contact/Contact"), {
 export default function Home() {
   return (
     <>
-      <div className="space-y-10">
+      <Hero />
+      <div className="space-y-10 lg:mx-28 md:mx-12 sm:mx-8 mx-4">
         <About />
-        <Services/>
+        <Services />
         <Skills />
         <Projects />
         <Resume />
