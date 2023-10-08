@@ -5,6 +5,7 @@ const OnlineCv = dynamic(() => import("@/components/OnlineCv/OnlineCv"), {
 
 export const metadata = {
   title: "Online CV",
+  description:"This is my online cv."
 };
 
 const OnlineCvPage = () => {
