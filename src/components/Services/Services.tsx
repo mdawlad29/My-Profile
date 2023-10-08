@@ -96,7 +96,7 @@ const Services = () => {
           </div>
           {/*----- Web Development -----*/}
           <motion.div
-            initial={{ y: -100 }}
+            initial={{ y: 100 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 1 }}
             className="lg:w-[70%] mx-auto shadow-lg hover:shadow-xl rounded-tr-[3rem] rounded-bl-[3rem] hover:rounded-bl-none hover:rounded-tr-none hover:rounded-br-[3rem] hover:rounded-tl-[3rem] border border-gray-200 hover:border-neutral hover:bg-accent hover:text-neutral duration-500 ease-in-out px-5 md:py-10 py-5 text-center group space-y-4"
