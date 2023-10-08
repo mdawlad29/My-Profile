@@ -151,8 +151,8 @@ const Projects = () => {
         </motion.div>
         <div className="space-y-10">
           <motion.div
-            initial={{ x: -100 }}
-            whileInView={{ x: 0 }}
+            initial={{ y: -100 }}
+            whileInView={{ y: 0 }}
             transition={{ duration: 1 }}
           >
             <FeaturedProject
@@ -182,8 +182,8 @@ const Projects = () => {
             </div>
           </div>
           <motion.div
-            initial={{ x: 100 }}
-            whileInView={{ x: 0 }}
+            initial={{ y: 100 }}
+            whileInView={{ y: 0 }}
             transition={{ duration: 1 }}
           >
             <FeaturedProject

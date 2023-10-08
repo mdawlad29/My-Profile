@@ -77,11 +77,11 @@ const OnlineCv = () => {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           {/*--- About Me ----*/}
           <motion.div
-            whileInView={{ x: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             initial={{
               opacity: 0,
-              x: -80,
+              y: -80,
             }}
             className="lg:col-span-1 space-y-8"
           >
@@ -192,7 +192,7 @@ const OnlineCv = () => {
               </div>
             </div>
             {/*---- Skills ----*/}
-            <div className="border border-gray-200 rounded-md p-4 h-[80vh] space-y-8">
+            <div className="border border-gray-200 rounded-md p-4 lg:h-[80vh] space-y-8">
               <h1 className="uppercase italic text-xl font-semibold text-accent">
                 skills
               </h1>
@@ -273,7 +273,7 @@ const OnlineCv = () => {
                 <h1 className="text-xl font-semibold text-primary mt-2 text-center">
                   Backend
                 </h1>
-                <div className="flex items-center flex-wrap gap-20 mt-8">
+                <div className="flex items-center flex-wrap lg:gap-20 md:gap-16 gap-12 mt-8">
                   <Image
                     src={nodeImg}
                     alt="Icon"
@@ -304,11 +304,11 @@ const OnlineCv = () => {
           </motion.div>
           {/*----- Experience ------*/}
           <motion.div
-            whileInView={{ x: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             initial={{
               opacity: 0,
-              x: 80,
+              y: 80,
             }}
             className="lg:col-span-2 border border-gray-200 rounded-md p-4 space-y-8"
           >

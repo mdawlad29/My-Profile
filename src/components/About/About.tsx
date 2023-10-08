@@ -17,11 +17,11 @@ const About = () => {
       >
         {/*---- Left ----*/}
         <motion.div
-          whileInView={{ x: 0, opacity: 1 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           initial={{
             opacity: 0,
-            x: -80,
+            y: 50,
           }}
           className="md:col-span-1 relative rounded-lg"
         >
@@ -37,11 +37,11 @@ const About = () => {
         </motion.div>
         {/*---- Right ----*/}
         <motion.div
-          whileInView={{ x: 0, opacity: 1 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           initial={{
             opacity: 0,
-            x: 80,
+            y: -80,
           }}
           className="md:col-span-2 lg:px-10 md:px-6 sm:px-4 px-2 py-3"
         >
@@ -134,7 +134,7 @@ const About = () => {
             {/*----- Button ------*/}
             <div className="flex items-center gap-4 lg:pt-5">
               <Link href={"/online_cv"} target="_blank">
-                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-8 py-1 rounded-full uppercase">
+                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm md:px-8 px-6 py-1 rounded-full uppercase">
                   online cv
                 </button>
               </Link>
@@ -143,7 +143,7 @@ const About = () => {
                 download={true}
                 target="_blank"
               >
-                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-4 py-1 rounded-full uppercase flex items-center gap-2">
+                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm md:px-8 px-6 py-1 rounded-full uppercase flex items-center gap-2">
                   resume <BiLinkExternal />
                 </button>
               </Link>

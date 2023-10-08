@@ -39,11 +39,11 @@ const Contact = () => {
         <div className="grid lg:grid-cols-5 grid-cols-1 lg:gap-6 gap-3">
           {/*----- Left -----*/}
           <motion.div
-            whileInView={{ x: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             initial={{
               opacity: 0,
-              x: -80,
+              y: -80,
             }}
             className="lg:col-span-3 p-4 shadow-lg rounded-lg border border-gray-200"
           >
@@ -101,11 +101,11 @@ const Contact = () => {
           </motion.div>
           {/*----- Right -----*/}
           <motion.div
-            whileInView={{ x: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             initial={{
               opacity: 0,
-              x: 80,
+              y: 80,
             }}
             className="lg:col-span-2 p-4 shadow-lg rounded-lg border border-gray-200"
           >

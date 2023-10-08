@@ -28,8 +28,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Layout>
           <main className="min-h-screen">{children}</main>
-          <Message />
         </Layout>
+        <Message />
       </body>
     </html>
   );
