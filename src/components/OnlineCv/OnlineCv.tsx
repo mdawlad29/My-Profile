@@ -75,7 +75,16 @@ const OnlineCv = () => {
         className="lg:py-20 md:py-16 py-10 lg:mx-28 md:mx-12 sm:mx-8 mx-4"
       >
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
-          <div className="lg:col-span-1 space-y-8">
+          {/*--- About Me ----*/}
+          <motion.div
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            initial={{
+              opacity: 0,
+              x: -80,
+            }}
+            className="lg:col-span-1 space-y-8"
+          >
             {/*---- Personal Info ----*/}
             <div className="border border-gray-200 rounded-md p-4">
               <div className="text-center">
@@ -292,9 +301,17 @@ const OnlineCv = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           {/*----- Experience ------*/}
-          <div className="lg:col-span-2 border border-gray-200 rounded-md p-4 space-y-8">
+          <motion.div
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            initial={{
+              opacity: 0,
+              x: 80,
+            }}
+            className="lg:col-span-2 border border-gray-200 rounded-md p-4 space-y-8"
+          >
             {/*--- CV Button ---*/}
             <div className="flex justify-end">
               <Link
@@ -392,7 +409,7 @@ const OnlineCv = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

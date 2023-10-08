@@ -8,6 +8,7 @@ import project2 from "../../../public/assets/images/project_2.png";
 import project3 from "../../../public/assets/images/project_3.png";
 import project4 from "../../../public/assets/images/project_4.png";
 import { BiLinkExternal } from "react-icons/bi";
+import {motion} from "framer-motion"
 
 const FeaturedProject = ({
   title,
@@ -132,14 +133,28 @@ const Projects = () => {
         id="project"
         className="lg:pt-20 md:pt-16 pt-10"
       >
-        <div className="lg:mb-10 md:mb-7 mb-4">
+        <motion.div
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="lg:mb-10 md:mb-7 mb-4"
+        >
           <h1 className="text-accent text-center md:text-4xl text-2xl italic font-semibold">
             My Projects
           </h1>
           <div className="md:w-24 w-16 h-1 mx-auto bg-accent md:mt-2 mt-1" />
-        </div>
+        </motion.div>
         <div className="space-y-10">
-          <div>
+          <motion.div
+            initial={{ x: -100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <FeaturedProject
               img={project1}
               title="Foody Restaurant"
@@ -147,7 +162,7 @@ const Projects = () => {
               link="https://vault-frontend-coral.vercel.app/"
               github="https://github.com/mdawlad29/vault-frontend"
             />
-          </div>
+          </motion.div>
           <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-12 gap-4">
             <div>
               <Project
@@ -166,7 +181,11 @@ const Projects = () => {
               />
             </div>
           </div>
-          <div>
+          <motion.div
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <FeaturedProject
               img={project3}
               title="Intelligent Systems & Solutions Limited"
@@ -174,7 +193,7 @@ const Projects = () => {
               link="https://intelligentsystemsolution.netlify.app/"
               github="https://github.com/mdawlad29/intelligentsystemssolutions"
             />
-          </div>
+          </motion.div>
         </div>
         <div className="mx-auto text-center mt-12">
           <Link

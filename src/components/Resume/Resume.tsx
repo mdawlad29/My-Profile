@@ -66,12 +66,22 @@ const Resume = () => {
         id="resume"
         className="lg:pt-20 md:pt-16 pt-10"
       >
-        <div className="lg:mb-10 md:mb-7 mb-4">
+        <motion.div
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="lg:mb-10 md:mb-7 mb-4"
+        >
           <h1 className="text-accent text-center md:text-4xl text-2xl italic font-semibold">
             My Resume
           </h1>
           <div className="md:w-24 w-16 h-1 mx-auto bg-accent md:mt-2 mt-1" />
-        </div>
+        </motion.div>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <div>
             <div className="flex items-center gap-4 mb-2">

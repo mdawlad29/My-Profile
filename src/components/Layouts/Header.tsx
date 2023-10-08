@@ -94,7 +94,7 @@ const Header = () => {
             {links.map((link) => (
               <li
                 key={link.name}
-                className="my-2"
+                className="my-4"
                 onClick={() => setExpandedMenu(false)}
               >
                 <Link href={link.link}>{link.name}</Link>

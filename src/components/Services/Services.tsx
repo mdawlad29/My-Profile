@@ -2,6 +2,7 @@
 import React from "react";
 import { BsFillEmojiSmileFill } from "react-icons/bs";
 import { FaLaptopCode, FaEye, FaMobileAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
@@ -13,15 +14,30 @@ const Services = () => {
         id="service"
         className="lg:pt-20 md:pt-16 pt-10"
       >
-        <div className="lg:mb-10 md:mb-7 mb-4">
+        <motion.div
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="lg:mb-10 md:mb-7 mb-4"
+        >
           <h1 className="text-accent text-center md:text-4xl text-2xl italic font-semibold">
             My Service
           </h1>
           <div className="md:w-24 w-16 h-1 mx-auto bg-accent md:mt-2 mt-1" />
-        </div>
+        </motion.div>
         <div className="space-y-10">
           {/*----- Client ------*/}
-          <div className="lg:w-[70%] mx-auto shadow-lg hover:shadow-xl  rounded-tr-[3rem] rounded-bl-[3rem] hover:rounded-bl-none hover:rounded-tr-none hover:rounded-br-[3rem] hover:rounded-tl-[3rem] border border-gray-200 hover:border-neutral hover:bg-accent hover:text-neutral duration-500 ease-in-out px-5 md:py-10 py-5 text-center group space-y-4">
+          <motion.div
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1 }}
+            className="lg:w-[70%] mx-auto shadow-lg hover:shadow-xl  rounded-tr-[3rem] rounded-bl-[3rem] hover:rounded-bl-none hover:rounded-tr-none hover:rounded-br-[3rem] hover:rounded-tl-[3rem] border border-gray-200 hover:border-neutral hover:bg-accent hover:text-neutral duration-500 ease-in-out px-5 md:py-10 py-5 text-center group space-y-4"
+          >
             <BsFillEmojiSmileFill className="text-center inline w-8 h-8 text-gray-800 group-hover:text-primary duration-500 ease-in-out" />
             <div>
               <h2
@@ -38,7 +54,7 @@ const Services = () => {
                 Thank you.!
               </p>
             </div>
-          </div>
+          </motion.div>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 gap-3">
             {[...Array(3)]?.map((_, index) => (
               <div
@@ -79,7 +95,12 @@ const Services = () => {
             ))}
           </div>
           {/*----- Web Development -----*/}
-          <div className="lg:w-[70%] mx-auto shadow-lg hover:shadow-xl rounded-tr-[3rem] rounded-bl-[3rem] hover:rounded-bl-none hover:rounded-tr-none hover:rounded-br-[3rem] hover:rounded-tl-[3rem] border border-gray-200 hover:border-neutral hover:bg-accent hover:text-neutral duration-500 ease-in-out px-5 md:py-10 py-5 text-center group space-y-4">
+          <motion.div
+            initial={{ x: -100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1 }}
+            className="lg:w-[70%] mx-auto shadow-lg hover:shadow-xl rounded-tr-[3rem] rounded-bl-[3rem] hover:rounded-bl-none hover:rounded-tr-none hover:rounded-br-[3rem] hover:rounded-tl-[3rem] border border-gray-200 hover:border-neutral hover:bg-accent hover:text-neutral duration-500 ease-in-out px-5 md:py-10 py-5 text-center group space-y-4"
+          >
             <FaLaptopCode className="text-center inline w-8 h-8 text-gray-800 group-hover:text-primary duration-500 ease-in-out" />
             <div>
               <h2
@@ -97,7 +118,7 @@ const Services = () => {
                 Thank you.!
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

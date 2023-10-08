@@ -5,6 +5,7 @@ import { FaMobileAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { BsFacebook, BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
+import {motion} from "framer-motion"
 
 const Contact = () => {
   const onSubmit = (e: any) => {
@@ -19,15 +20,33 @@ const Contact = () => {
         id="contact"
         className="lg:py-20 md:py-16 py-10"
       >
-        <div className="lg:mb-10 md:mb-7 mb-4">
+        <motion.div
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="lg:mb-10 md:mb-7 mb-4"
+        >
           <h1 className="text-accent text-center md:text-4xl text-2xl italic font-semibold">
             Contact Me
           </h1>
           <div className="md:w-24 w-16 h-1 mx-auto bg-accent md:mt-2 mt-1" />
-        </div>
+        </motion.div>
         <div className="grid lg:grid-cols-5 grid-cols-1 lg:gap-6 gap-3">
           {/*----- Left -----*/}
-          <div className="lg:col-span-3 p-4 shadow-lg rounded-lg border border-gray-200">
+          <motion.div
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            initial={{
+              opacity: 0,
+              x: -80,
+            }}
+            className="lg:col-span-3 p-4 shadow-lg rounded-lg border border-gray-200"
+          >
             <form className="space-y-2">
               <h2 className="md:text-2xl text-xl text-primary font-bold">
                 Send Message
@@ -79,9 +98,17 @@ const Contact = () => {
                 submit
               </button>
             </form>
-          </div>
+          </motion.div>
           {/*----- Right -----*/}
-          <div className="lg:col-span-2 p-4 shadow-lg rounded-lg border border-gray-200">
+          <motion.div
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            initial={{
+              opacity: 0,
+              x: 80,
+            }}
+            className="lg:col-span-2 p-4 shadow-lg rounded-lg border border-gray-200"
+          >
             <h2 className="md:text-2xl text-xl text-primary font-bold text-center mb-5">
               Get In Touch
             </h2>
@@ -150,7 +177,7 @@ const Contact = () => {
                 <BsInstagram className="inline w-7 h-7 mx-2 text-accent hover:text-primary duration-300 ease-in-out" />
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

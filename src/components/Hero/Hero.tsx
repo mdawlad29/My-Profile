@@ -7,6 +7,7 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { AiOutlineDown } from "react-icons/ai";
 
 const Hero = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -118,7 +119,7 @@ const Hero = () => {
         >
           <div className="text-center font-bold md:text-3xl text-2xl">
             <h1>HI !</h1>
-            <h2 className="uppercase" style={{ letterSpacing: ".2em" }}>
+            <h2 className="uppercase" style={{ letterSpacing: ".3em" }}>
               {`i'm`} <span className="text-primary">mohammad awlad</span>
             </h2>
             <TypeAnimation
@@ -134,10 +135,8 @@ const Hero = () => {
               repeat={Infinity}
             />
             {/*---- Button ----*/}
-            <Link href={"#about"} className="block mt-4">
-              <button className="border border-neutral rounded-full animate-bounce w-5 h-12 text-3xl text-primary">
-                &#129043;
-              </button>
+            <Link href={"#about"} className="block mt-12">
+              <AiOutlineDown className="border border-neutral rounded-full animate-bounce h-10 text-xl text-primary flex justify-center items-center mx-auto" />
             </Link>
           </div>
         </motion.div>
