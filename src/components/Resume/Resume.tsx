@@ -98,13 +98,21 @@ const Resume = () => {
               />
               <ul className="w-full">
                 <Details
-                  position="Front-end Developer (full time)"
+                  position="Jr. Front-end Developer"
+                  company="Softic"
+                  companyLink="https://softic.ai/"
+                  time="Nov 2023 - present"
+                />
+
+                <Details
+                  position="Front-end Developer"
                   company="Marhaba Limited"
                   companyLink="https://marhaba.com.bd/"
-                  time="Jun 2023 - present"
+                  time="Jun 2023 - Oct 2023"
                 />
+
                 <Details
-                  position="React Developer (full time)"
+                  position="React Developer"
                   company="Nexis Limited"
                   companyLink="https://www.nexisltd.com/"
                   time="May 2022 - May 2023"
@@ -112,6 +120,7 @@ const Resume = () => {
               </ul>
             </div>
           </div>
+
           {/*---- Educations -----*/}
           <div>
             <div className="flex items-center gap-4 mb-2">
