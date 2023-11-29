@@ -35,6 +35,7 @@ const About = () => {
             className="h-full object-cover rounded-lg"
           />
         </motion.div>
+
         {/*---- Right ----*/}
         <motion.div
           whileInView={{ y: 0, opacity: 1 }}
@@ -60,6 +61,7 @@ const About = () => {
             </h1>
             <div className="md:w-24 w-16 h-1 bg-accent md:mt-2 mt-1" />
           </motion.div>
+
           <div className="lg:space-y-5 space-y-3 lg:pt-14 pt-4">
             <p className="text-justify text-sm font-medium">
               I am Md. Awlad, A frontend web developer. I can do any kind of
@@ -72,6 +74,7 @@ const About = () => {
               toolkit (Tailwind CSS, Material UI, Bootstrap5, CSS3), HTML5,
               JavaScript, ES6, API integration.
             </p>
+
             {/*----- Personal Info -----*/}
             <div className="flex justify-between flex-wrap items-center lg:pt-5">
               {/*----- Left ------*/}
@@ -99,6 +102,7 @@ const About = () => {
                   </Link>
                 </div>
               </div>
+
               {/*----- Right -----*/}
               <div>
                 <div className="flex items-center gap-2">
@@ -131,6 +135,7 @@ const About = () => {
                 </div>
               </div>
             </div>
+
             {/*----- Button ------*/}
             <div className="flex items-center gap-4 lg:pt-5">
               <Link href={"/online_cv"} target="_blank">

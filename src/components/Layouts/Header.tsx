@@ -44,17 +44,7 @@ const Header = () => {
           event.preventDefault();
         }}
       >
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-            transition: {
-              delay: 0.7,
-            },
-          }}
-          transition={{ delay: 1 }}
+        <div
           className={`${activeNav} text-neutral py-6 lg:px-28 md:px-12 sm:px-8 px-4 bg-secondary-50`}
         >
           <div className="flex justify-between items-center">
@@ -83,7 +73,8 @@ const Header = () => {
               className="text-xl lg:hidden block cursor-pointer"
             />
           </div>
-        </motion.div>
+        </div>
+
         {/*---- Mobile Menu ----*/}
         <div
           className={`${
@@ -101,6 +92,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
+
           <AiOutlineClose
             onClick={() => setExpandedMenu(false)}
             className="text-xl mt-3 cursor-pointer"
