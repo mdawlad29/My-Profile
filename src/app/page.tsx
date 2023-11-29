@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="space-y-10 lg:mx-28 md:mx-12 sm:mx-8 mx-4">
+      <div className="space-y-10 lg:mx-20 md:mx-10 sm:mx-6 mx-4">
         <About />
         <Services />
         <Skills />

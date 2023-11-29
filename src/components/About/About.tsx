@@ -71,8 +71,8 @@ const About = () => {
             <p className="text-justify text-sm font-medium">
               I have professional experience in JavaScript Framework(React JS),
               React JS wrapper(Next JS), JavaScript library(React JS), Frontend
-              toolkit (Tailwind CSS, Material UI, Bootstrap5, CSS3), HTML5,
-              JavaScript, ES6, API integration.
+              toolkit (Tailwind CSS, Material UI, Ant Design, Bootstrap5, CSS3),
+              HTML5, JavaScript, TypeScript, ES6, API integration.
             </p>
 
             {/*----- Personal Info -----*/}
@@ -139,7 +139,7 @@ const About = () => {
             {/*----- Button ------*/}
             <div className="flex items-center gap-4 lg:pt-5">
               <Link href={"/online_cv"} target="_blank">
-                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm md:px-8 px-6 py-1 rounded-full uppercase">
+                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm px-4 py-2 w-32 sm:w-40 rounded-full uppercase">
                   online cv
                 </button>
               </Link>
@@ -148,7 +148,7 @@ const About = () => {
                 download={true}
                 target="_blank"
               >
-                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm md:px-8 px-6 py-1 rounded-full uppercase flex items-center gap-2">
+                <button className="bg-primary hover:bg-accent duration-300 ease-in-out font-medium text-neutral text-sm justify-center px-4 py-2 w-32 sm:w-40 rounded-full uppercase flex items-center gap-2">
                   resume <BiLinkExternal />
                 </button>
               </Link>

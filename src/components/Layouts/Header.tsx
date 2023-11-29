@@ -45,7 +45,7 @@ const Header = () => {
         }}
       >
         <div
-          className={`${activeNav} text-neutral py-6 lg:px-28 md:px-12 sm:px-8 px-4 bg-secondary-50`}
+          className={`${activeNav} text-neutral py-6 lg:px-20 md:px-10 sm:px-6 px-4 bg-secondary-50`}
         >
           <div className="flex justify-between items-center">
             <Link href={"/"}>
@@ -79,7 +79,7 @@ const Header = () => {
         <div
           className={`${
             expandedMenu ? "translate-y-0" : "-translate-y-full"
-          } bg-primary text-neutral lg:hidden md:px-12 sm:px-8 px-4 py-3 transition-transform duration-500 ease-in-out transform fixed top-0 left-0 w-full z-40 flex justify-between`}
+          } bg-primary text-neutral lg:hidden md:px-12 sm:px-8 px-4 py-3 transition-transform duration-700 ease-in-out transform fixed top-0 left-0 w-full z-40 flex justify-between`}
         >
           <ul className="uppercase">
             {links.map((link) => (

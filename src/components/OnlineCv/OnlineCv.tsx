@@ -72,7 +72,7 @@ const OnlineCv = () => {
     <>
       <div
         onCopy={(event) => event.preventDefault()}
-        className="lg:py-20 md:py-16 py-10 lg:mx-28 md:mx-12 sm:mx-8 mx-4"
+        className="lg:py-20 md:py-16 py-10 lg:mx-20 md:mx-10 sm:mx-6 mx-4"
       >
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           {/*--- About Me ----*/}
@@ -99,20 +99,27 @@ const OnlineCv = () => {
                 <h1 className="text-xl font-semibold text-primary mt-2">
                   MD. AWLAD
                 </h1>
-                <p className="text-sm">@Frontend Web Developer</p>
-                <div className="mt-2">
-                  <Link href={"https://github.com/mdawlad29"} target="_blank">
-                    <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral text-sm px-3 py-1 rounded-md uppercase">
+
+                <p className="text-sm mb-4">@Frontend Web Developer</p>
+
+                <div>
+                  <Link
+                    href={"https://github.com/mdawlad29?tab=repositories"}
+                    target="_blank"
+                  >
+                    <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral sm:text-sm text-xs px-3 py-2 rounded-md uppercase sm:w-32 w-28 lg:w-[100px] lg:text-xs">
                       follow us
                     </button>
                   </Link>
+
                   <Link href={"https://www.messenger.com/t/100078916504555"}>
-                    <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral text-sm px-3 py-1 rounded-md uppercase mx-4">
+                    <button className="bg-accent hover:bg-primary duration-300 ease-in-out font-medium text-neutral sm:text-sm text-xs px-3 py-2 rounded-md uppercase sm:mx-4 mx-2 sm:w-32 w-28 lg:w-[100px] lg:text-xs">
                       message
                     </button>
                   </Link>
                 </div>
               </div>
+
               {/*---- Description ----*/}
               <div className="mt-8">
                 <h1 className="uppercase italic text-xl font-semibold text-accent">
@@ -127,11 +134,13 @@ const OnlineCv = () => {
                   <p className="text-justify text-sm font-medium">
                     I have professional experience in JavaScript Framework(React
                     JS), React JS wrapper(Next JS), JavaScript library(React
-                    JS), Frontend toolkit (Tailwind CSS, Material UI,
-                    Bootstrap5, CSS3), HTML5, JavaScript, ES6, API integration.
+                    JS), Frontend toolkit (Tailwind CSS, Material UI, Ant
+                    Design, Bootstrap5, CSS3), HTML5, JavaScript, TypeScript,
+                    ES6, API integration.
                   </p>
                 </div>
               </div>
+
               {/*--- Personal Detail ----*/}
               <div className="mt-6">
                 <div className="flex items-center gap-2">
@@ -175,6 +184,7 @@ const OnlineCv = () => {
                   </Link>
                 </div>
               </div>
+
               {/*--- Links ---*/}
               <div className="text-center mt-8">
                 <Link href={"https://www.facebook.com/awlads"} target="_blank">
@@ -191,11 +201,13 @@ const OnlineCv = () => {
                 </Link>
               </div>
             </div>
+
             {/*---- Skills ----*/}
             <div className="border border-gray-200 rounded-md p-4 lg:h-[80vh] space-y-8">
               <h1 className="uppercase italic text-xl font-semibold text-accent">
                 skills
               </h1>
+
               {/*--- Frontend ----*/}
               <div>
                 <h1 className="text-xl font-semibold text-primary mt-2 text-center">
@@ -268,6 +280,7 @@ const OnlineCv = () => {
                   />
                 </div>
               </div>
+
               {/*--- Backend ----*/}
               <div>
                 <h1 className="text-xl font-semibold text-primary mt-2 text-center">
@@ -302,6 +315,7 @@ const OnlineCv = () => {
               </div>
             </div>
           </motion.div>
+
           {/*----- Experience ------*/}
           <motion.div
             whileInView={{ y: 0, opacity: 1 }}
@@ -324,9 +338,11 @@ const OnlineCv = () => {
                 </button>
               </Link>
             </div>
+
             <h1 className="uppercase italic text-xl font-semibold text-accent">
               experience
             </h1>
+
             {/*---- Experience Info ----*/}
             <div ref={ref} className="relative">
               <motion.div
@@ -335,12 +351,21 @@ const OnlineCv = () => {
               />
               <ul className="w-full">
                 <Details
+                  position="Jr. Front-end Developer"
+                  company="Softic"
+                  companyLink="https://softic.ai/"
+                  time="Nov 2023 - present"
+                  desc="As a frontend developer, I play pivotal role in crafting immersive digital experiences. My responsive encompass designing and building responsive, user-friendly website that meet clients objectives and engage their target audiences effectively. I utilize a range of technologies, including HTML, CSS JavaScript, TypeScript and web development frameworks (ReactJs, NextJS) to bring web designs to life."
+                />
+
+                <Details
                   position="Front-end Developer"
                   company="Marhaba Limited"
                   companyLink="https://marhaba.com.bd/"
-                  time="Jun 2023 - present"
+                  time="Jun 2023 - Oct 2023"
                   desc="As a frontend developer, I play pivotal role in crafting immersive digital experiences. My responsive encompass designing and building responsive, user-friendly website that meet clients objectives and engage their target audiences effectively. I utilize a range of technologies, including HTML, CSS JavaScript and web development frameworks (ReactJs, NextJS) to bring web designs to life."
                 />
+
                 <Details
                   position="React Developer"
                   company="Nexis Limited"
@@ -350,6 +375,7 @@ const OnlineCv = () => {
                 />
               </ul>
             </div>
+
             {/*----- Projects ------*/}
             <div className="pt-4">
               <h1 className="uppercase italic text-xl font-semibold text-accent">
