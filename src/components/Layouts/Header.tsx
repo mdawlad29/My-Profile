@@ -108,7 +108,7 @@ const Header = () => {
         <div
           className={`${
             expandedMenu ? "translate-y-0" : "-translate-y-full"
-          } bg-white text-accent md:hidden md:px-12 sm:px-8 px-4 py-3 transition-transform duration-700 ease-in-out transform fixed top-0 left-0 w-full z-50 flex justify-between`}
+          } bg-white text-accent md:hidden md:px-12 sm:px-8 px-4 py-3 transition-transform duration-700 ease-in-out transform fixed top-0 left-0 w-full z-50 flex justify-between shadow-2xl`}
         >
           <ul className="uppercase">
             {links.map((link) => (
