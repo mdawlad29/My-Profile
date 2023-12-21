@@ -16,9 +16,7 @@ const links = [
 
 const Header = () => {
   const [expandedMenu, setExpandedMenu] = React.useState(false);
-  const [activeNav, setActiveNav] = React.useState<boolean | string>(
-    "" || false
-  );
+  const [activeNav, setActiveNav] = React.useState<string>("");
 
   React.useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -32,11 +30,11 @@ const Header = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
       windowHeight > 300
-        ? setActiveNav("fixed top-0 left-0 w-full !bg-[#fff] shadow-xl z-50")
+        ? setActiveNav("fixed top-0 left-0 w-full !bg-neutral shadow-xl z-50")
         : setActiveNav("");
     }
   };
-
+  console.log(activeNav);
   return (
     <>
       <div
@@ -45,7 +43,9 @@ const Header = () => {
         }}
       >
         <div
-          className={`${activeNav} text-neutral py-6 lg:px-20 md:px-10 sm:px-6 px-4 bg-secondary-50`}
+          className={`${
+            activeNav ? activeNav : "bg-secondary-50"
+          } text-neutral py-6 lg:px-20 md:px-10 sm:px-6 px-4 `}
         >
           <div
             className={`flex ${
@@ -72,8 +72,10 @@ const Header = () => {
 
             <div
               className={`md:block hidden ${
-                activeNav ? "border-none py-0" : "border border-primary py-2"
-              } rounded-full px-6`}
+                activeNav
+                  ? "border-none py-0"
+                  : "border border-primary py-2 px-6"
+              } rounded-full`}
             >
               <ul className="flex items-center lg:gap-x-14 md:gap-x-5 uppercase">
                 {links.map((link) => (
