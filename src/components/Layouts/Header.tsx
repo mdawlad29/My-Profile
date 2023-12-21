@@ -34,7 +34,7 @@ const Header = () => {
         : setActiveNav("");
     }
   };
-  console.log(activeNav);
+
   return (
     <>
       <div
