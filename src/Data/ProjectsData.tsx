@@ -24,7 +24,7 @@ export const Projects = [
     id: 7,
     name: "Foody Restaurant",
     language: "ReactJS & NextJS",
-    link: "https://vault-frontend-coral.vercel.app/",
+    link: "https://vault-restaurent.vercel.app/",
   },
   {
     id: 8,

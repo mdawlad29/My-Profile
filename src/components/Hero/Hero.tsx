@@ -1,13 +1,9 @@
 "use client";
-import React from "react";
-import Link from "next/link";
 import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim";
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
-import { AiOutlineDown } from "react-icons/ai";
+import type { Container, Engine } from "tsparticles-engine";
+import { loadSlim } from "tsparticles-slim";
 
 const Hero = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -27,7 +23,7 @@ const Hero = () => {
         onCopy={(event) => {
           event.preventDefault();
         }}
-        className="bg-[#222222] h-[80vh]"
+        className="bg-[#222222] md:h-[65vh] h-[55vh]"
       >
         <Particles
           id="tsparticles"
@@ -37,7 +33,7 @@ const Hero = () => {
             fpsLimit: 120,
             style: {
               width: "100%",
-              height: "87vh",
+              height: "75vh",
               position: "absolute",
             },
             interactivity: {
@@ -103,43 +99,33 @@ const Hero = () => {
             detectRetina: true,
           }}
         />
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: -80,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          className="flex justify-center items-center h-full text-neutral px-4"
-        >
-          <div className="text-center font-bold md:text-3xl text-2xl">
-            <h1>HI !</h1>
-            <h2 className="uppercase" style={{ letterSpacing: ".3em" }}>
-              {`i'm`} <span className="text-primary">mohammad awlad</span>
-            </h2>
-            <TypeAnimation
-              sequence={["Frontend Web Developer_", 4000, "Freelancer_", 4000]}
-              wrapper="span"
-              speed={10}
-              style={{
-                fontSize: "0.5em",
-                letterSpacing: ".3em",
-                fontWeight: 500,
-                display: "inline-block",
-              }}
-              repeat={Infinity}
-            />
-            {/*---- Button ----*/}
-            <Link href={"#about"} className="block mt-12">
-              <AiOutlineDown className="border border-neutral rounded-full animate-bounce h-10 text-xl text-primary flex justify-center items-center mx-auto" />
-            </Link>
-          </div>
-        </motion.div>
+        <div className="name-title flex justify-center md:text-[5em] text-[3em]">
+          <h2>hi i&apos;m awlad</h2>
+          <h2>hi i&apos;m awlad</h2>
+          <h2>hi i&apos;m awlad</h2>
+        </div>
+
+        <div className="flex justify-center items-center h-full text-neutral font-bold md:text-4xl text-[30px] md:mt-14 mt-10">
+          <TypeAnimation
+            sequence={[
+              "Frontend Web Developer_",
+              4000,
+              "MERN Stack Developer_",
+              4000,
+              "Freelancer_",
+              4000,
+            ]}
+            wrapper="span"
+            speed={10}
+            style={{
+              fontSize: "0.5em",
+              letterSpacing: ".3em",
+              fontWeight: 500,
+              display: "inline-block",
+            }}
+            repeat={Infinity}
+          />
+        </div>
       </div>
     </>
   );

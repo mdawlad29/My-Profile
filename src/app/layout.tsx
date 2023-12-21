@@ -1,7 +1,7 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import dynamic from "next/dynamic";
+import { Montserrat } from "next/font/google";
+import "./globals.css";
 const inter = Montserrat({ subsets: ["latin"] });
 const Message = dynamic(() => import("@/components/Message/Message"), {
   ssr: false,

@@ -1,9 +1,9 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import AboutImg from "../../../public/assets/images/about_image.jpeg";
 import Link from "next/link";
 import { BiLinkExternal } from "react-icons/bi";
-import { motion } from "framer-motion";
+import AboutImg from "../../../public/assets/images/about_image.jpeg";
 
 const About = () => {
   return (
@@ -25,7 +25,7 @@ const About = () => {
           }}
           className="md:col-span-1 relative rounded-lg"
         >
-          <div className="absolute top-1 -right-2 -z-10 w-[100%] h-[101%] bg-gray-700 rounded-lg" />
+          <div className="absolute top-1 -right-2 -z-10 w-[100%] h-[101%] bg-primary rounded-lg" />
           <Image
             src={AboutImg}
             alt="About Image"

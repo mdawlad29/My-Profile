@@ -1,14 +1,13 @@
 "use client";
+import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import React from "react";
 import { AiFillGithub } from "react-icons/ai";
+import { BiLinkExternal } from "react-icons/bi";
 import project1 from "../../../public/assets/images/project_1.png";
 import project2 from "../../../public/assets/images/project_2.png";
 import project3 from "../../../public/assets/images/project_3.png";
 import project4 from "../../../public/assets/images/project_4.png";
-import { BiLinkExternal } from "react-icons/bi";
-import {motion} from "framer-motion"
 
 const FeaturedProject = ({
   title,
@@ -25,7 +24,7 @@ const FeaturedProject = ({
 }) => {
   return (
     <article className="grid lg:grid-cols-2 grid-cols-1 lg:gap-6 gap-3 items-center rounded-xl shadow-xl md:px-5 px-3 md:py-8 py-5 relative bg-neutral border border-gray-200">
-      <div className="absolute top-0 -right-2 -z-10 w-[100%] lg:h-[103%] h-[102%] rounded-xl bg-gray-700" />
+      <div className="absolute top-0 -right-2 -z-10 w-[100%] lg:h-[103%] h-[102%] rounded-xl bg-primary" />
       <Link
         href={link}
         target="_blank"
@@ -81,7 +80,7 @@ const Project = ({
 }) => {
   return (
     <article className="rounded-xl shadow-xl md:p-5 p-3 border border-gray-200  relative bg-neutral">
-      <div className="absolute top-0 -right-2 -z-10 w-[100%] h-[102%] rounded-xl bg-gray-700" />
+      <div className="absolute top-0 -right-2 -z-10 w-[100%] h-[102%] rounded-xl bg-primary" />
       <Link
         href={link}
         target="_blank"
@@ -159,7 +158,7 @@ const Projects = () => {
               img={project1}
               title="Foody Restaurant"
               summary="Foody is a restaurant website through which one can know all information about a restaurant and can order food while sitting at the table."
-              link="https://vault-frontend-coral.vercel.app/"
+              link="https://vault-restaurent.vercel.app/"
               github="https://github.com/mdawlad29/vault-frontend"
             />
           </motion.div>

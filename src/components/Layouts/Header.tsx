@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { motion } from "framer-motion";
+import React from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const links = [
   { name: "home", link: "/" },
@@ -16,7 +16,9 @@ const links = [
 
 const Header = () => {
   const [expandedMenu, setExpandedMenu] = React.useState(false);
-  const [activeNav, setActiveNav] = React.useState<string>("");
+  const [activeNav, setActiveNav] = React.useState<boolean | string>(
+    "" || false
+  );
 
   React.useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -29,10 +31,8 @@ const Header = () => {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 200
-        ? setActiveNav(
-            "fixed top-0 left-0 w-full bg-[#222222] bg-opacity-80 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
-          )
+      windowHeight > 300
+        ? setActiveNav("fixed top-0 left-0 w-full !bg-[#fff] shadow-xl z-50")
         : setActiveNav("");
     }
   };
@@ -47,20 +47,45 @@ const Header = () => {
         <div
           className={`${activeNav} text-neutral py-6 lg:px-20 md:px-10 sm:px-6 px-4 bg-secondary-50`}
         >
-          <div className="flex justify-between items-center">
-            <Link href={"/"}>
-              <h1 className={`uppercase text-xl font-bold text-primary`}>
-                Mohammad Awlad
-              </h1>
+          <div
+            className={`flex ${
+              activeNav ? "justify-between" : "justify-center"
+            } items-center`}
+          >
+            <Link
+              onClick={() => setExpandedMenu(true)}
+              href={"/"}
+              className={`md:w-12 md:h-12 w-16 h-16 ${
+                activeNav ? "md:block" : "md:hidden block"
+              }`}
+            >
+              <Image
+                src={"/assets/images/awlad.jpg"}
+                alt="Awlad"
+                width={600}
+                height={600}
+                priority
+                quality={100}
+                className="w-full h-full rounded-full object-cover"
+              />
             </Link>
-            <div className="lg:block hidden">
-              <ul className="flex items-center gap-6 uppercase">
+
+            <div
+              className={`md:block hidden ${
+                activeNav ? "border-none py-0" : "border border-primary py-2"
+              } rounded-full px-6`}
+            >
+              <ul className="flex items-center lg:gap-x-14 md:gap-x-5 uppercase">
                 {links.map((link) => (
                   <li
                     key={link.name}
                     className={`${
-                      activeNav ? "" : "hover:text-primary"
-                    } duration-300 ease-in-out`}
+                      link?.name === "home"
+                        ? "text-primary"
+                        : activeNav
+                        ? "text-accent hover:text-primary"
+                        : "hover:text-primary"
+                    } duration-300 ease-in-out font-medium`}
                   >
                     <Link href={link.link}>{link.name}</Link>
                   </li>
@@ -70,7 +95,9 @@ const Header = () => {
             {/*---- Menu Icon ---*/}
             <AiOutlineMenu
               onClick={() => setExpandedMenu(true)}
-              className="text-xl lg:hidden block cursor-pointer"
+              className={`text-xl md:hidden block cursor-pointer ${
+                activeNav ? "text-accent" : "hidden"
+              }`}
             />
           </div>
         </div>
@@ -79,13 +106,15 @@ const Header = () => {
         <div
           className={`${
             expandedMenu ? "translate-y-0" : "-translate-y-full"
-          } bg-primary text-neutral lg:hidden md:px-12 sm:px-8 px-4 py-3 transition-transform duration-700 ease-in-out transform fixed top-0 left-0 w-full z-40 flex justify-between`}
+          } bg-white text-accent md:hidden md:px-12 sm:px-8 px-4 py-3 transition-transform duration-700 ease-in-out transform fixed top-0 left-0 w-full z-50 flex justify-between`}
         >
           <ul className="uppercase">
             {links.map((link) => (
               <li
                 key={link.name}
-                className="my-4"
+                className={`${
+                  link?.name === "home" && "text-primary"
+                } my-4 font-semibold text-accent`}
                 onClick={() => setExpandedMenu(false)}
               >
                 <Link href={link.link}>{link.name}</Link>
