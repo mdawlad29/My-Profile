@@ -7,7 +7,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import project1 from "../../../public/assets/images/project_1.png";
 import project2 from "../../../public/assets/images/project_2.png";
 import project3 from "../../../public/assets/images/project_3.png";
-import project4 from "../../../public/assets/images/project_4.png";
+import project4 from "../../../public/assets/images/project_5.png";
 
 const FeaturedProject = ({
   title,
@@ -165,18 +165,19 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-12 gap-4">
             <div>
               <Project
+                img={project4}
+                title="E-Tutor Learning Platform"
+                link="https://e-tutor-learning.vercel.app/"
+                github="https://github.com/mdawlad29/E-tutor"
+              />
+            </div>
+
+            <div>
+              <Project
                 img={project2}
                 title="Bondhu Health"
                 link="https://bondhuhealth.netlify.app/"
                 github="https://github.com/mdawlad29/Bondhu-Health"
-              />
-            </div>
-            <div>
-              <Project
-                img={project4}
-                title="Instance Realestate"
-                link="https://instance-realestate.web.app/"
-                github="https://github.com/mdawlad29/Instance-real-state"
               />
             </div>
           </div>

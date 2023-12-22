@@ -28,9 +28,15 @@ export const Projects = [
   },
   {
     id: 8,
-    name: "Intelligent Systems & Solutions Limited",
-    language: "ReactJS",
-    link: "https://intelligentsystemsolution.netlify.app/",
+    name: "Foody Restaurant",
+    language: "ReactJS & NextJS",
+    link: "https://vault-restaurent.vercel.app/",
+  },
+  {
+    id: 12,
+    name: "E-Tutor Learning Platform",
+    language: "ReactJS & NextJS & React Redux",
+    link: "https://e-tutor-psi.vercel.app/",
   },
   {
     id: 9,
