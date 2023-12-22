@@ -1,26 +1,26 @@
 "use client";
-import React from "react";
-import picture from "../../../public/assets/images/awlad.jpg";
+import { Projects } from "@/Data/ProjectsData";
+import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { BiLinkExternal } from "react-icons/bi";
-import CvLiIcon from "../Shared/CvLiIcon";
-import { motion, useScroll } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { Projects } from "@/Data/ProjectsData";
-import { MdEmail } from "react-icons/md";
+import React from "react";
+import { BiLinkExternal } from "react-icons/bi";
 import { BsFacebook, BsGithub, BsTelephoneFill } from "react-icons/bs";
-import reactImg from "../../../public/assets/images/reacticon.png";
-import nextImg from "../../../public/assets/images/nextjs.jpg";
-import jsImg from "../../../public/assets/images/js.png";
-import muiImg from "../../../public/assets/images/mui.png";
-import tailImg from "../../../public/assets/images/tailwind.png";
+import { MdEmail } from "react-icons/md";
+import picture from "../../../public/assets/images/awlad.jpg";
 import bootImg from "../../../public/assets/images/bootstrap.png";
-import htmlImg from "../../../public/assets/images/html.png";
 import cssImg from "../../../public/assets/images/css.png";
-import nodeImg from "../../../public/assets/images/node.png";
-import mongoImg from "../../../public/assets/images/mongo.png";
 import expressImg from "../../../public/assets/images/express.png";
+import htmlImg from "../../../public/assets/images/html.png";
+import jsImg from "../../../public/assets/images/js.png";
+import mongoImg from "../../../public/assets/images/mongo.png";
+import muiImg from "../../../public/assets/images/mui.png";
+import nextImg from "../../../public/assets/images/nextjs.jpg";
+import nodeImg from "../../../public/assets/images/node.png";
+import reactImg from "../../../public/assets/images/reacticon.png";
+import tailImg from "../../../public/assets/images/tailwind.png";
+import CvLiIcon from "../Shared/CvLiIcon";
 
 const Details = ({
   position,
@@ -425,7 +425,6 @@ const OnlineCv = () => {
                               >
                                 Click Here
                               </button>
-                              <Link href={project?.link}></Link>
                             </td>
                           </tr>
                         ))}
