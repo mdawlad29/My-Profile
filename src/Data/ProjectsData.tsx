@@ -36,7 +36,7 @@ export const Projects = [
     id: 12,
     name: "E-Tutor Learning Platform",
     language: "ReactJS & NextJS & React Redux",
-    link: "https://e-tutor-psi.vercel.app/",
+    link: "https://e-tutor-learning.vercel.app/",
   },
   {
     id: 9,
