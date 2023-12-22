@@ -105,7 +105,7 @@ const Hero = () => {
           <h2>hi i&apos;m awlad</h2>
         </div>
 
-        <div className="flex justify-center items-center h-full text-neutral font-bold md:text-4xl text-[30px] md:mt-14 mt-10">
+        <div className="flex justify-center items-center h-full text-neutral font-bold md:text-4xl text-[30px] md:mt-10 mt-7">
           <TypeAnimation
             sequence={[
               "Frontend Web Developer_",
