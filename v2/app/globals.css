@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0f172a;
-    --foreground: #ededed;
+    --foreground: #d1d5dc;
   }
 }
 
@@ -23,4 +23,63 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(122, 122, 122, 0.15) 1px,
+    transparent 0px
+  );
+  background-size: 20px 20px;
+}
+
+.nav-hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  background: linear-gradient(to right, #60a5fa, #a855f7);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.nav-hover:hover::after {
+  opacity: 0.1;
+}
+
+.active-nav-item {
+  position: relative;
+  border: 1px solid rgba(0, 255, 255, 0.74);
+  background: linear-gradient(
+    to right,
+    rgba(168, 85, 247, 0.1),
+    rgba(59, 130, 246, 0.1)
+  );
+  color: #fff;
+  user-select: none;
+  white-space: nowrap;
+  transition: all 0.05s linear;
+  font-family: inherit;
+  z-index: 1;
+}
+
+.active-nav-item::before,
+.active-nav-item::after {
+  content: "";
+  position: absolute;
+  background: #18243d;
+  transition: all 0.2s linear;
+}
+
+.active-nav-item::before {
+  width: calc(100% + 6px);
+  height: calc(100% - 16px);
+  top: 8px;
+  left: -3px;
+}
+
+.active-nav-item::after {
+  width: calc(100% - 16px);
+  height: calc(100% + 6px);
+  top: -3px;
+  left: 8px;
 }

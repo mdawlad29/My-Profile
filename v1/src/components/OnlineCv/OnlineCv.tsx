@@ -1,5 +1,5 @@
 "use client";
-import { Projects } from "@/Data/ProjectsData";
+import { Projects } from "../../Data/ProjectsData";
 import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
