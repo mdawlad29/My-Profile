@@ -4,8 +4,8 @@ import React from "react";
 export const Footer = () => {
   return (
     <footer className="mt-20 flex flex-col items-center justify-between text-sm opacity-70 md:flex-row mx-auto w-full max-w-6xl">
-      <div>© 2025 Awlad. All rights reserved.</div>
-      <div className="flex gap-4 items-center">
+      <div>© 2025 Awlad Hossain Alo. All rights reserved.</div>
+      <div className="flex gap-6 items-center  md:mt-0 mt-4">
         <LinkTag text="linkedin" link="https://www.linkedin.com/in/mdawlad/" />
         <LinkTag text="GitHub" link="https://github.com/mdawlad29" />
         <LinkTag text="Facebook" link="https://facebook.com/awlads" />
