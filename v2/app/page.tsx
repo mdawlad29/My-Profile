@@ -1,12 +1,9 @@
+import SnowCursor from "@/shared/SnowCursor";
+
 export default function Home() {
   return (
-    <div
-    // style={{
-    //   backgroundImage:
-    //     "radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0px)",
-    //   backgroundSize: "20px 20px",
-    // }}
-    >
+    <div>
+      <SnowCursor />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
         explicabo ipsum eaque, repellendus veniam ab. Doloribus, iusto nobis
