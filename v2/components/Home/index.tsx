@@ -13,10 +13,12 @@ import Link from "next/link";
 import { PiArrowBendUpRightThin } from "react-icons/pi";
 import { ServiceCard } from "@/shared/cards/ServiceCard";
 import Image from "next/image";
+import { IoLocation } from "react-icons/io5";
+import Recommended from "./Recommended";
 
 const HomeSection = () => {
   return (
-    <motion.section>
+    <section>
       <motion.h1
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,8 +44,13 @@ const HomeSection = () => {
         functionality with beautiful design.
       </motion.p>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
-        <div className="group relative rounded-2xl overflow-hidden cursor-pointer lg:h-full h-[500px]">
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+        className="grid md:grid-cols-2 grid-cols-1 gap-5 mb-6"
+      >
+        <div className="group relative rounded-2xl overflow-hidden lg:h-full h-[500px]">
           {/* Profile Image with zoom on hover */}
           <Image
             src="/picture.jpg"
@@ -65,7 +72,7 @@ const HomeSection = () => {
           </div>
 
           {/* SOFTWARE ENGINEER Badge Vertical + Slide */}
-          <div className="absolute top-64 -right-[8rem] group-hover:-right-[9.3rem] z-10 rounded-xl group-hover:rounded-b-none bg-gradient-to-b from-blue-600 to-purple-600 px-4 py-3 opacity-100 shadow-xl backdrop-blur-lg transition-all duration-500 ease-in-out group-hover:opacity-100 tracking-wider transform -rotate-90 origin-top-left">
+          <div className="absolute top-64 -right-[8rem] group-hover:-right-[9.3rem] z-10 rounded-xl group-hover:rounded-b-none bg-gradient-to-b from-blue-600 to-purple-600 px-4 py-3 opacity-0 shadow-xl backdrop-blur-lg transition-all duration-500 ease-in-out group-hover:opacity-100 tracking-wider transform -rotate-90 origin-top-left">
             <h2 className="text-lg font-medium uppercase text-white text-[13px]">
               SOFTWARE ENGINEER
             </h2>
@@ -74,7 +81,8 @@ const HomeSection = () => {
           {/* Bottom Info Overlay */}
           <div className="absolute bottom-0 left-0 z-10 w-full p-6">
             <div className="space-y-4 flex flex-col gap-3 text-sm text-gray-300">
-              <div>
+              <div className="flex items-center gap-2">
+                <IoLocation />
                 <span>Dhaka, Bangladesh</span>
               </div>
 
@@ -88,7 +96,7 @@ const HomeSection = () => {
               </p>
 
               <div className="group/link flex cursor-pointer items-center gap-2 text-sm text-blue-400">
-                <Link href={""}>View full profile</Link>
+                <Link href={"/about"}>View full profile</Link>
                 <PiArrowBendUpRightThin />
               </div>
             </div>
@@ -124,52 +132,85 @@ const HomeSection = () => {
             </p>
 
             <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
-              <ServiceCard
-                link=""
-                icon={<CodeIcon />}
-                subtitle="Development"
-                title="Web Development"
-                description="Build responsive, high-performance websites with modern frameworks"
-                className="absolute inset-0 rounded-xl bg-gradient-to-br from-pink-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl"
-              />
-              <ServiceCard
-                link=""
-                icon={<DesignIcon />}
-                subtitle="Design"
-                title="UI/UX Design"
-                description="Create intuitive interfaces with focus on user experience"
-                className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-15"
-              />
-              <ServiceCard
-                link=""
-                icon={<MobileIcon />}
-                subtitle="Mobile"
-                title="Mobile Apps"
-                description="Develop cross-platform mobile applications with native feel"
-                className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500 to-green-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-15"
-              />
-              <ServiceCard
-                link=""
-                icon={<SeoIcon />}
-                subtitle="Marketing"
-                title="SEO Optimization"
-                description="Improve visibility and search ranking with proven strategies"
-                className="absolute inset-0 rounded-xl bg-gradient-to-br from-amber-500 to-red-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-15"
-              />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                transition={{ duration: 0.25, ease: "easeOut", delay: 1 }}
+              >
+                <ServiceCard
+                  link=""
+                  icon={<CodeIcon />}
+                  subtitle="Development"
+                  title="Web Development"
+                  description="Build responsive, high-performance websites with modern frameworks"
+                  className="absolute inset-0 rounded-xl bg-gradient-to-br from-pink-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                transition={{ duration: 0.25, ease: "easeOut", delay: 1 }}
+              >
+                <ServiceCard
+                  link=""
+                  icon={<DesignIcon />}
+                  subtitle="Design"
+                  title="UI/UX Design"
+                  description="Create intuitive interfaces with focus on user experience"
+                  className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-15"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, x: -10 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.95, x: -10 }}
+                transition={{ duration: 0.25, ease: "easeOut", delay: 1 }}
+              >
+                <ServiceCard
+                  link=""
+                  icon={<MobileIcon />}
+                  subtitle="Mobile"
+                  title="Mobile Apps"
+                  description="Develop cross-platform mobile applications with native feel"
+                  className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500 to-green-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-15"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, x: -10 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.95, x: -10 }}
+                transition={{ duration: 0.25, ease: "easeOut", delay: 1 }}
+              >
+                <ServiceCard
+                  link=""
+                  icon={<SeoIcon />}
+                  subtitle="Marketing"
+                  title="SEO Optimization"
+                  description="Improve visibility and search ranking with proven strategies"
+                  className="absolute inset-0 rounded-xl bg-gradient-to-br from-amber-500 to-red-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-15"
+                />
+              </motion.div>
             </div>
 
             <div className="text-center">
               <Link
-                href={""}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:shadow-purple-500/20"
+                href={"/services"}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:shadow-purple-500/20 hover:scale-105 ease-in-out"
               >
                 View All Services <PiArrowBendUpRightThin />
               </Link>
             </div>
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+
+      <Recommended />
+    </section>
   );
 };
 

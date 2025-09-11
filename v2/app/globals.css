@@ -29,4 +29,25 @@ body {
     transparent 0px
   );
   background-size: 20px 20px;
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #293552;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #162d61;
 }
