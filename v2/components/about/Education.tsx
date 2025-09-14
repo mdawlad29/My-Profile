@@ -25,6 +25,7 @@ export const Education = () => {
         <motion.div
           initial={{ opacity: 0, x: 10 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="lg:col-span-1"
         >
@@ -90,6 +91,7 @@ export const Education = () => {
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="lg:col-span-1"
         >

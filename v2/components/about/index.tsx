@@ -6,6 +6,7 @@ import { PiDownloadSimpleBold } from "react-icons/pi";
 import { Biography } from "./Biography";
 import { Education } from "./Education";
 import { TechnicalSkills } from "./TechnicalSkills";
+import { Experience } from "./Experience";
 
 const AboutSection = () => {
   return (
@@ -48,6 +49,7 @@ const AboutSection = () => {
       <Biography />
       <Education />
       <TechnicalSkills />
+      <Experience />
     </>
   );
 };

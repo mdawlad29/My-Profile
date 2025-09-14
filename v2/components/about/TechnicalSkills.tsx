@@ -28,6 +28,7 @@ export const TechnicalSkills = () => {
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           style={{
             opacity: 1,
@@ -89,6 +90,7 @@ export const TechnicalSkills = () => {
         <motion.div
           initial={{ opacity: 0, x: 10 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
           style={{
             opacity: 1,
@@ -150,6 +152,7 @@ export const TechnicalSkills = () => {
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 1.6 }}
           style={{
             opacity: 1,
