@@ -206,6 +206,7 @@ export const TechnicalSkills = () => {
         <motion.div
           initial={{ opacity: 0, x: 10 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 2 }}
           style={{
             opacity: 1,
@@ -263,6 +264,53 @@ export const TechnicalSkills = () => {
           </div>
         </motion.div>
       </div>
+
+      <section className="border-gradient-to-r mt-12 rounded-3xl border bg-gradient-to-br from-slate-800/30 to-purple-500/20 p-8 backdrop-blur-xl">
+        <div className="text-center">
+          <h2 className="mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-2xl font-bold text-transparent">
+            Technology Stack
+          </h2>
+
+          <p className="mx-auto max-w-2xl text-gray-300">
+            As a Senior Software Engineer, I work with a comprehensive range of
+            modern technologies to build scalable, performant, and user-centric
+            web applications. My expertise spans across the entire frontend
+            ecosystem, from core technologies to advanced tooling and
+            optimization techniques.
+          </p>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {[...Array(10)]?.map((_, idx) => (
+              <span
+                key={idx}
+                className="rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300 backdrop-blur-sm"
+              >
+                {idx === 0
+                  ? "React"
+                  : idx === 1
+                  ? "Next.js"
+                  : idx === 2
+                  ? "Angular"
+                  : idx === 3
+                  ? "Vue.js"
+                  : idx === 4
+                  ? "Tailwind CSS"
+                  : idx === 5
+                  ? "TypeScript"
+                  : idx === 6
+                  ? "Node.js"
+                  : idx === 7
+                  ? "GraphQL"
+                  : idx === 8
+                  ? "Framer Motion"
+                  : idx === 9
+                  ? "PostGressQL"
+                  : "Express.js"}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
