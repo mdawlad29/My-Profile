@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { PiDownloadSimpleBold } from "react-icons/pi";
 import { Biography } from "./Biography";
 import { Education } from "./Education";
+import { TechnicalSkills } from "./TechnicalSkills";
 
 const AboutSection = () => {
   return (
@@ -46,6 +47,7 @@ const AboutSection = () => {
 
       <Biography />
       <Education />
+      <TechnicalSkills />
     </>
   );
 };

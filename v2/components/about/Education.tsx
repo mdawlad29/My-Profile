@@ -1,11 +1,16 @@
 import { GiAchievement } from "react-icons/gi";
 import { PiGraduationCap } from "react-icons/pi";
-import { RiGraduationCapFill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 export const Education = () => {
   return (
     <section className="mb-24">
-      <div className="mb-12 flex items-center gap-3">
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="mb-12 flex items-center gap-3"
+      >
         <div className="rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 p-2">
           <PiGraduationCap className="text-xl" />
         </div>
@@ -14,10 +19,15 @@ export const Education = () => {
           Education & Achievements
         </h2>
         <div className="h-[2px] flex-grow rounded-full bg-gradient-to-r from-purple-500/50 to-transparent" />
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-        <div className="lg:col-span-1">
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="lg:col-span-1"
+        >
           <div className="rounded-3xl bg-gradient-to-br from-blue-600/30 via-indigo-600/20 to-violet-600/10 p-1 backdrop-blur-sm">
             <div className="h-full rounded-[22px] border border-slate-800/50 bg-slate-900/90 p-8 shadow-xl">
               <h3 className="mb-6 flex items-center gap-3 bg-gradient-to-r from-blue-400 to-violet-500 bg-clip-text text-2xl font-bold text-transparent">
@@ -75,10 +85,16 @@ export const Education = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="lg:col-span-1">
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="lg:col-span-1"
+        >
           <div className="rounded-3xl bg-gradient-to-br from-purple-500/20 via-indigo-500/20 to-transparent p-1">
-            <div className="h-full rounded-[22px] bg-[#1E293B] p-8">
+            <div className="h-full rounded-[22px] bg-[#1E293B] p-8 ">
               <h3 className="mb-6 flex items-center gap-3 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-2xl font-bold text-transparent">
                 <GiAchievement className="text-violet-500" />
                 Achievements
@@ -88,7 +104,7 @@ export const Education = () => {
                 {[...Array(2)]?.map((_, idx) => (
                   <div
                     key={idx}
-                    className="group rounded-xl border border-purple-500/10 bg-gradient-to-br from-[#1E293B]/60 to-[#1E293B]/80 p-4 transition-all duration-300 hover:border-purple-500/30 hover:bg-purple-500/5"
+                    className="group rounded-xl border border-purple-500/10 bg-gradient-to-br from-[#1E293B]/60 to-[#1E293B]/80 p-4 transition-all duration-300 hover:border-purple-500/30 hover:bg-purple-500/5 hover:scale-[99%] ease-in-out"
                   >
                     <div className="mb-2 flex items-start justify-between">
                       <h3 className="text-lg font-bold text-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-blue-500 group-hover:bg-clip-text group-hover:text-transparent">
@@ -117,7 +133,7 @@ export const Education = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

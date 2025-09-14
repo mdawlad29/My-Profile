@@ -15,14 +15,19 @@ export const Biography = () => {
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
       className="mb-24"
     >
-      <div className="mb-12 flex items-center gap-3">
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+        className="mb-12 flex items-center gap-3"
+      >
         <div className="rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 p-2">
           <CgFileDocument className="text-xl" />
         </div>
 
         <h2 className="text-3xl font-bold text-white md:text-4xl">Biography</h2>
         <div className="ml-3 h-[2px] flex-grow rounded-full bg-gradient-to-r from-blue-500/50 to-transparent" />
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
         <div className="h-full lg:col-span-5 group relative rounded-2xl overflow-hidden hover:scale-105 border-2 border-[#645e6e] hover:border-blue-500 duration-500 ease-in-out">
