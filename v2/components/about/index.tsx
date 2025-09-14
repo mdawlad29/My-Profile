@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { PiDownloadSimpleBold } from "react-icons/pi";
 import { Biography } from "./Biography";
+import { Education } from "./Education";
 
 const AboutSection = () => {
   return (
@@ -44,6 +45,7 @@ const AboutSection = () => {
       </section>
 
       <Biography />
+      <Education />
     </>
   );
 };
