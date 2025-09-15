@@ -50,6 +50,11 @@ const AboutSection = () => {
       <Education />
       <TechnicalSkills />
       <Experience />
+
+      <div className="relative mt-12 overflow-hidden border-t border-gray-800/50 pt-8">
+        <div className="absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+        <div className="absolute left-0 top-[1px] h-[1px] w-full bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+      </div>
     </>
   );
 };
