@@ -2,11 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "@/assets";
-import { LuCircleUserRound } from "react-icons/lu";
-import { RiExternalLinkLine } from "react-icons/ri";
 import { IoMdCode } from "react-icons/io";
 import { MdCheck } from "react-icons/md";
 import { Pricing } from "./Pricing";
@@ -14,7 +11,7 @@ import { Pricing } from "./Pricing";
 const ServiceSection = () => {
   return (
     <>
-      <section>
+      <section className="mb-24">
         <motion.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
