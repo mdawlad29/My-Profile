@@ -284,7 +284,7 @@ export const ArrowIcon = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-arrow-up-right"
+      className={`lucide lucide-arrow-up-right group-hover:-translate-y-1 duration-300 ease-in-out`}
     >
       <path d="M7 7h10v10"></path>
       <path d="M7 17 17 7"></path>

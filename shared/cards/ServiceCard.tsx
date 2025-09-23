@@ -1,5 +1,5 @@
+import { ArrowIcon } from "@/assets";
 import Link from "next/link";
-import { PiArrowBendUpRightThin } from "react-icons/pi";
 
 interface ICardProps {
   title: string;
@@ -47,7 +47,7 @@ export const ServiceCard = ({
         </p>
 
         <div className="mt-auto flex cursor-pointer items-center gap-1 text-xs font-medium text-purple-400 group-hover:text-purple-300 hover:translate-x-0.5 transition-all duration-300 ease-in-out">
-          <span>Learn more</span> <PiArrowBendUpRightThin />
+          <span>Learn more</span> <ArrowIcon />
         </div>
       </div>
     </Link>

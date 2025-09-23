@@ -1,4 +1,5 @@
 import {
+  ArrowIcon,
   CloudIcon,
   CodeIconTwo,
   FeatureIcon,
@@ -6,7 +7,6 @@ import {
   StoreIcon,
 } from "@/assets";
 import Link from "next/link";
-import { PiArrowBendUpRightThin } from "react-icons/pi";
 
 export const Features = () => {
   return (
@@ -94,7 +94,7 @@ export const Features = () => {
           <span className="mr-2 transition-colors group-hover/btn:text-indigo-300">
             View projects
           </span>
-          <PiArrowBendUpRightThin />
+          <ArrowIcon />
         </div>
       </div>
     </Link>

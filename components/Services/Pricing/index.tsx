@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { IoIosCheckmarkCircle } from "react-icons/io";
+import { useState } from "react";
 import { IoCheckmark } from "react-icons/io5";
 
 export const Pricing = () => {
+  const [plan, setPlan] = useState("monthly");
+
   return (
     <section>
       <div className="mb-16 flex flex-col items-center text-center">
@@ -18,11 +20,25 @@ export const Pricing = () => {
         </p>
 
         <div className="flex items-center rounded-full border border-gray-700 p-1">
-          <button className="rounded-full px-4 py-2 text-sm font-medium transition bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+          <button
+            onClick={() => setPlan("monthly")}
+            className={`rounded-full px-4 py-2 text-sm font-medium transition cursor-pointer duration-300 ease-in-out ${
+              plan === "monthly"
+                ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+                : "text-gray-400"
+            }`}
+          >
             Monthly
           </button>
 
-          <button className="rounded-full px-4 py-2 text-sm font-medium transition text-gray-400">
+          <button
+            onClick={() => setPlan("annual")}
+            className={`rounded-full px-4 py-2 text-sm font-medium transition cursor-pointer duration-300 ease-in-out ${
+              plan === "annual"
+                ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+                : "text-gray-400"
+            }`}
+          >
             Annual (20% off)
           </button>
         </div>

@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
+  ArrowIcon,
   CodeIcon,
   DesignIcon,
   MobileIcon,
@@ -10,7 +11,6 @@ import {
   ServiceIcon,
 } from "@/assets";
 import Link from "next/link";
-import { PiArrowBendUpRightThin } from "react-icons/pi";
 import { ServiceCard } from "@/shared/cards/ServiceCard";
 import Image from "next/image";
 import { IoLocation } from "react-icons/io5";
@@ -97,7 +97,7 @@ const HomeSection = () => {
 
               <div className="group/link flex cursor-pointer items-center gap-2 text-sm text-blue-400">
                 <Link href={"/about"}>View full profile</Link>
-                <PiArrowBendUpRightThin />
+                <ArrowIcon />
               </div>
             </div>
           </div>
@@ -200,9 +200,9 @@ const HomeSection = () => {
             <div className="text-center">
               <Link
                 href={"/services"}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:shadow-purple-500/20 hover:scale-105 ease-in-out"
+                className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:shadow-purple-500/20 hover:scale-105 ease-in-out"
               >
-                View All Services <PiArrowBendUpRightThin />
+                View All Services <ArrowIcon />
               </Link>
             </div>
           </div>

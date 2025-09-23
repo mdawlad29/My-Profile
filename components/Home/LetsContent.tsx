@@ -1,8 +1,8 @@
+import { ArrowIcon } from "@/assets";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiMessageSquare } from "react-icons/fi";
 import { IoTimeOutline } from "react-icons/io5";
-import { PiArrowBendUpRightThin } from "react-icons/pi";
 import { TbWorld } from "react-icons/tb";
 
 type BubbleStyle = {
@@ -112,7 +112,7 @@ export const LetsContent = () => {
             </span>
           </div>
           <div className="group/arrow flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500">
-            <PiArrowBendUpRightThin />
+            <ArrowIcon />
           </div>
         </div>
       </div>

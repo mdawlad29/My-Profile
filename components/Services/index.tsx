@@ -4,9 +4,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowIcon } from "@/assets";
-import { IoMdCode } from "react-icons/io";
+import { IoIosCloudOutline, IoIosSearch, IoMdCode } from "react-icons/io";
 import { MdCheck } from "react-icons/md";
 import { Pricing } from "./Pricing";
+import { LuPaintbrush } from "react-icons/lu";
+import { CiMobile3 } from "react-icons/ci";
+import { FiZap } from "react-icons/fi";
+import { LinkTag } from "@/shared/LinkTag";
 
 const ServiceSection = () => {
   return (
@@ -55,17 +59,62 @@ const ServiceSection = () => {
                   background: "rgb(30, 41, 59)",
                 }}
               >
-                <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 mb-6 flex transform items-center justify-center transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110">
-                  <IoMdCode className="text-2xl text-white" />
+                <div
+                  className={`h-14 w-14 rounded-2xl ${
+                    idx === 0
+                      ? "bg-gradient-to-br from-purple-500 to-indigo-500v"
+                      : idx === 1
+                      ? "bg-gradient-to-br from-blue-500 to-cyan-400"
+                      : idx === 2
+                      ? "bg-gradient-to-br from-pink-500 to-rose-400"
+                      : idx === 3
+                      ? "bg-gradient-to-br from-green-500 to-emerald-400"
+                      : idx === 4
+                      ? "bg-gradient-to-br from-amber-500 to-yellow-400"
+                      : "bg-gradient-to-br from-teal-500 to-cyan-400"
+                  } mb-6 flex transform items-center justify-center transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110`}
+                >
+                  {idx === 0 ? (
+                    <IoMdCode className="text-2xl text-white" />
+                  ) : idx === 1 ? (
+                    <LuPaintbrush className="text-2xl text-white" />
+                  ) : idx === 2 ? (
+                    <CiMobile3 className="text-2xl text-white" />
+                  ) : idx === 3 ? (
+                    <IoIosSearch className="text-2xl text-white" />
+                  ) : idx === 4 ? (
+                    <FiZap className="text-2xl text-white" />
+                  ) : (
+                    <IoIosCloudOutline className="text-2xl text-white" />
+                  )}
                 </div>
 
                 <h3 className="mb-3 text-2xl font-bold text-white">
-                  Web Development
+                  {idx === 0
+                    ? "Web Development"
+                    : idx === 1
+                    ? "UI/UX Design"
+                    : idx === 2
+                    ? "Mobile Apps"
+                    : idx === 3
+                    ? "SEO Optimization"
+                    : idx === 4
+                    ? "Performance Optimization"
+                    : "Cloud Solutions"}
                 </h3>
 
                 <p className="mb-6 text-gray-400">
-                  Building responsive, fast-loading websites and web
-                  applications with modern technologies.
+                  {idx === 0
+                    ? "Building responsive, fast-loading websites and web applications with modern technologies."
+                    : idx === 1
+                    ? "Creating intuitive and engaging user experiences that convert visitors into customers."
+                    : idx === 2
+                    ? "Developing native and cross-platform mobile applications that deliver exceptional experiences."
+                    : idx === 3
+                    ? "Improving your website's visibility in search engines to drive more organic traffic."
+                    : idx === 4
+                    ? "Speeding up your website for better user experience and higher conversion rates."
+                    : "Setting up and managing your cloud infrastructure for scalability and reliability."}
                 </p>
 
                 <div className="mt-auto">
@@ -84,13 +133,7 @@ const ServiceSection = () => {
                     </ul>
                   </div>
 
-                  <Link
-                    href={""}
-                    className="group/link flex cursor-pointer items-center text-sm text-blue-400"
-                  >
-                    Read more
-                    <ArrowIcon />
-                  </Link>
+                  <LinkTag title="Learn More" />
                 </div>
               </div>
             </div>

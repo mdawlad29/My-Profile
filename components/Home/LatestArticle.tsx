@@ -1,6 +1,5 @@
-import { LatestIcon } from "@/assets";
+import { ArrowIcon, LatestIcon } from "@/assets";
 import Link from "next/link";
-import { PiArrowBendUpRightThin } from "react-icons/pi";
 
 export const LatestArticle = () => {
   return (
@@ -63,7 +62,7 @@ export const LatestArticle = () => {
           <span className="mr-2 transition-colors group-hover/btn:text-blue-300">
             Read articles
           </span>
-          <PiArrowBendUpRightThin />
+          <ArrowIcon />
         </div>
       </div>
     </Link>
