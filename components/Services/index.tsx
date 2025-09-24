@@ -38,14 +38,12 @@ const ServiceSection = () => {
           and stand out from the competition.
         </motion.p>
 
-        <div className="mb-24">
-          <h2 className="mb-12 text-3xl font-bold text-white md:text-4xl">
-            What I{" "}
-            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Offer
-            </span>
-          </h2>
-        </div>
+        <h2 className="mb-12 text-3xl font-bold text-white md:text-4xl">
+          What I{" "}
+          <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            Offer
+          </span>
+        </h2>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[...Array(6)]?.map((_, idx) => (

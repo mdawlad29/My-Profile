@@ -1,7 +1,8 @@
+import LearnSection from "@/components/Learn";
 import React from "react";
 
 const LearnPage = () => {
-  return <div>Learn Section</div>;
+  return <LearnSection />;
 };
 
 export default LearnPage;
