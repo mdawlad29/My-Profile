@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <>
       <nav
-        className="fixed left-1/2 top-4 z-50 w-[95%] max-w-6xl -translate-x-1/2 overflow-hidden rounded-2xl border border-white/20 p-4"
+        className="fixed left-1/2 top-4 !z-[99999] w-[95%] max-w-6xl -translate-x-1/2 overflow-hidden rounded-2xl border border-white/20 p-4"
         style={{
           background:
             "linear-gradient(135deg, rgba(13,17,23,0.8) 0%, rgba(25,30,45,0.9) 100%)",
@@ -23,7 +23,7 @@ export const Header = () => {
             "0 10px 30px -5px rgba(0,0,0,0.3), 0 0 20px rgba(96,165,250,0.2)",
         }}
       >
-        <div className="relative z-10 flex items-center justify-between">
+        <div className="relative !z-[99999] flex items-center justify-between">
           <Logo />
 
           {/* Desktop Menu */}
@@ -67,7 +67,7 @@ export const Header = () => {
           <div className="md:hidden block">
             <button
               onClick={() => setCollapsed(!collapsed)}
-              className="relative z-50 flex h-10 w-10 flex-col items-center justify-center rounded-lg border border-white/20 bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm"
+              className="relative !z-[99999] flex h-10 w-10 flex-col items-center justify-center rounded-lg border border-white/20 bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm"
             >
               {/* Top Line */}
               <motion.span

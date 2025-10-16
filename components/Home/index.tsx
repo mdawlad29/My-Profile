@@ -53,11 +53,11 @@ const HomeSection = () => {
         <div className="group relative rounded-2xl overflow-hidden lg:h-full h-[500px]">
           {/* Profile Image with zoom on hover */}
           <Image
-            src="/picture.jpg"
+            src="/profile-img-1.jpeg"
             alt="Profile"
             width={400}
             height={400}
-            className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+            className="w-full lg:h-[650px] h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
           />
 
           {/* Let's Connect Text */}

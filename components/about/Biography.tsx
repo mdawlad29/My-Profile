@@ -32,7 +32,7 @@ export const Biography = () => {
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
         <div className="h-full lg:col-span-5 group relative rounded-2xl overflow-hidden hover:scale-105 border-2 border-[#645e6e] hover:border-blue-500 duration-500 ease-in-out">
           <Image
-            src="/picture.jpg"
+            src="/profile-img-2.jpeg"
             alt="Profile"
             width={400}
             height={400}

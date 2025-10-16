@@ -37,12 +37,16 @@ const AboutSection = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
           className="mt-8 flex justify-center"
         >
-          <button className="group relative flex items-center gap-3 overflow-hidden rounded-full border border-blue-500/30 bg-gradient-to-r from-blue-600/20 to-purple-600/20 px-8 py-4 backdrop-blur-md transition-all duration-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 ease-in-out">
+          <a
+            href="/Mohammad_Awlad_Resume.pdf"
+            download
+            className="group relative flex items-center gap-3 overflow-hidden rounded-full border border-blue-500/30 bg-gradient-to-r from-blue-600/20 to-purple-600/20 px-8 py-4 backdrop-blur-md transition-all duration-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 ease-in-out"
+          >
             <div className="flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500 p-2">
               <PiDownloadSimpleBold className="text-xl" />
             </div>
             Download Resume
-          </button>
+          </a>
         </motion.div>
       </section>
 

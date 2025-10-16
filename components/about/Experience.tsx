@@ -7,6 +7,7 @@ import { TbWorld } from "react-icons/tb";
 import { FaUserGroup } from "react-icons/fa6";
 import { CiTrophy } from "react-icons/ci";
 import { FiZap } from "react-icons/fi";
+import Link from "next/link";
 
 export const Experience = () => {
   return (
@@ -233,9 +234,13 @@ export const Experience = () => {
                         </svg>
                       </div>
 
-                      <span className="text-base font-medium text-white">
+                      <a
+                        href="/Mohammad_Awlad_Resume.pdf"
+                        download
+                        className="text-base font-medium text-white"
+                      >
                         Check out my Resume !!!
-                      </span>
+                      </a>
                     </div>
                   </a>
                 </div>

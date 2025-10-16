@@ -93,9 +93,9 @@ export const Education = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="lg:col-span-1"
+          className="lg:col-span-1 h-full"
         >
-          <div className="rounded-3xl bg-gradient-to-br from-purple-500/20 via-indigo-500/20 to-transparent p-1">
+          <div className="rounded-3xl bg-gradient-to-br from-purple-500/20 via-indigo-500/20 to-transparent p-1 h-full">
             <div className="h-full rounded-[22px] bg-[#1E293B] p-8 ">
               <h3 className="mb-6 flex items-center gap-3 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-2xl font-bold text-transparent">
                 <GiAchievement className="text-violet-500" />

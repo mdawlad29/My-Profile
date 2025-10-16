@@ -18,7 +18,7 @@ const MobileHeader = ({
   return (
     <AnimatePresence>
       {collapsed && (
-        <div className="fixed inset-0 z-10 md:hidden">
+        <div className="fixed inset-0 z-[9999] md:hidden">
           {/* Background overlay */}
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -31,7 +31,7 @@ const MobileHeader = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="fixed left-1/2 top-24 z-50 w-[95%] max-w-6xl -translate-x-1/2 overflow-hidden rounded-2xl border border-white/60 p-6 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-indigo-500/5"
+            className="fixed left-1/2 top-24 !z-[9999] w-[95%] max-w-6xl -translate-x-1/2 overflow-hidden rounded-2xl border border-white/60 p-6 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-indigo-500/5"
           >
             <ul className="flex flex-col space-y-2 mb-14">
               {headerItems?.map((item, i) => {

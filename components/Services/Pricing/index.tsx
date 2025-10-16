@@ -227,7 +227,7 @@ export const Pricing = () => {
               Ready to start your projects
             </h3>
             <p className="text-gray-300">
-              Contact me today for a free consultation and let's create
+              Contact me today for a free consultation and let&apos;s create
               something amazing together.
             </p>
           </div>

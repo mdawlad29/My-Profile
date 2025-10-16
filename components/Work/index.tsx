@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ArrowIcon } from "@/assets";
 import { LuCircleUserRound } from "react-icons/lu";
 import { RiExternalLinkLine } from "react-icons/ri";
+import { allProjects } from "@/dummy";
 
 const WorkSection = () => {
   return (
@@ -35,7 +36,7 @@ const WorkSection = () => {
       </motion.p>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {[...Array(9)].map((item, i) => (
+        {allProjects?.map((item, i) => (
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +47,7 @@ const WorkSection = () => {
             <div className="relative h-full overflow-hidden rounded-xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-400/20">
               <div className="relative h-56 overflow-hidden">
                 <Image
-                  src="/picture.jpg"
+                  src="/default-fallback-image.png"
                   alt="Project 1"
                   width={400}
                   height={400}
@@ -57,7 +58,8 @@ const WorkSection = () => {
                   <div className="flex translate-y-4 transform items-center justify-between transition-transform duration-300 group-hover:translate-y-0">
                     <div className="flex space-x-3">
                       <Link
-                        href={""}
+                        href={item?.link}
+                        target="_blank"
                         className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition-colors hover:bg-white/20"
                       >
                         <RiExternalLinkLine className="text-2xl" />
@@ -85,11 +87,12 @@ const WorkSection = () => {
                 </div>
 
                 <h3 className="mb-2 text-xl font-bold text-white transition-colors duration-300 group-hover:text-blue-400">
-                  DocTime
+                  {item?.name}
                 </h3>
                 <p className="mb-4 line-clamp-2 text-sm text-gray-300">
-                  Consult specialized doctors online with the DocTime App,
-                  Bangladesh&apos;s leading video consultation platform.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati numquam est, dolorum sed nobis rerum neque explicabo
+                  eos cupiditate illum.
                 </p>
 
                 <div className="flex items-center justify-between text-sm text-gray-400">
@@ -99,7 +102,8 @@ const WorkSection = () => {
                   </div>
 
                   <Link
-                    href={""}
+                    target="_blank"
+                    href={item?.link}
                     className="flex items-center text-blue-400 transition-transform group-hover:translate-x-1"
                   >
                     <span className="mr-1">View Details</span>
