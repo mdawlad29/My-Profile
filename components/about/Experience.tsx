@@ -234,13 +234,13 @@ export const Experience = () => {
                         </svg>
                       </div>
 
-                      <a
+                      <Link
                         href="/Mohammad_Awlad_Resume.pdf"
                         download
                         className="text-base font-medium text-white"
                       >
                         Check out my Resume !!!
-                      </a>
+                      </Link>
                     </div>
                   </a>
                 </div>
