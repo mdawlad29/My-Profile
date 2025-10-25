@@ -57,18 +57,6 @@ npm run dev
 
 ---
 
-## 🤝 Contributing
-
-Feel free to open issues & suggestions to improve my portfolio! ✨
-
----
-
-## 📄 License
-
-This project is **open-source** and available under the MIT License.
-
----
-
 ### 📬 Contact Me
 
 📧 Email: [mdawladbdinfo@gmial.com](mailto:mdawladbdinfo@gmial.com)
