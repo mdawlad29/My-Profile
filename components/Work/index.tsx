@@ -67,7 +67,7 @@ const WorkSection = () => {
                     </div>
 
                     <div className="rounded-full bg-white/10 px-3 py-1 text-xs text-white backdrop-blur-md">
-                      {item?.creationDate}
+                      Creation Time: {item?.creationDate}
                     </div>
                   </div>
                 </div>

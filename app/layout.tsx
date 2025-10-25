@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/partials/Header";
 import { Footer } from "@/partials/Footer";
 import SnowCursor from "@/shared/SnowCursor";
+import { SocialConnect } from "@/components/SocialConnect";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,8 +35,9 @@ export default function RootLayout({
       >
         <Header />
         <main className="relative min-h-screen overflow-x-hidden px-4 pb-8 pt-28 mx-auto w-full max-w-6xl">
-          <SnowCursor />
           {children}
+          <SnowCursor />
+          <SocialConnect />
         </main>
         <Footer />
       </body>
