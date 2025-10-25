@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Mohammad Awlad - Portfolio
 
-## Getting Started
+A modern, fully responsive personal portfolio website built to showcase my professional experience, featured projects, and learning journey as a **Frontend / Full‑Stack Developer**.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+✅ Clean & visually appealing UI with a dark modern theme
+✅ Fully responsive and mobile‑friendly design
+✅ Smooth animations and transitions
+✅ Dedicated sections: Home, About, Work, Services, Learn & Contact
+✅ Highlights my projects with screenshots and tags
+✅ Performance & usability focused layout
+✅ Easy scalability for adding future projects
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js / React.js
+- **Styling:** Tailwind CSS
+- **Icons:** React Icons / Custom SVGs
+- **Typography & Layout:** Responsive Grid & Flex System
+
+> _Modify this section according to your exact stack_
+
+---
+
+## 📌 Pages Breakdown
+
+| Page     | Description                          |
+| -------- | ------------------------------------ |
+| Home     | Hero section with quick intro        |
+| About    | Short bio, skills & experience       |
+| Work     | Projects gallery with preview images |
+| Services | What I offer to clients / companies  |
+| Learn    | My continuous learning roadmap       |
+| Contact  | Contact form & social profiles       |
+
+---
+
+## ⚙️ Setup & Installation
 
 ```bash
+# Clone the repo
+git clone https://github.com/mdawlad29/My-Profile
+
+cd My-Profile
+
+# Install dependencies
+npm install
+
+# Run locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🤝 Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Feel free to open issues & suggestions to improve my portfolio! ✨
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is **open-source** and available under the MIT License.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 📬 Contact Me
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📧 Email: [mdawladbdinfo@gmial.com](mailto:mdawladbdinfo@gmial.com)
+🔗 LinkedIn: [mdawlad](https://www.linkedin.com/in/mdawlad/)
+🌐 Portfolio: [awlad.vercel.app](https://awlad.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
