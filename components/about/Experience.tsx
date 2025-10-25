@@ -189,8 +189,8 @@ export const Experience = () => {
                 </div>
 
                 <div className="mt-12 flex justify-center">
-                  <a
-                    href="/resume.pdf"
+                  <Link
+                    href="/Awlad_resume.pdf"
                     download
                     className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-white/20 px-8 py-3.5 backdrop-blur-md transition-all duration-300 cursor-pointer"
                     style={{
@@ -234,15 +234,11 @@ export const Experience = () => {
                         </svg>
                       </div>
 
-                      <Link
-                        href="/Mohammad_Awlad_Resume.pdf"
-                        download
-                        className="text-base font-medium text-white"
-                      >
+                      <span className="text-base font-medium text-white">
                         Check out my Resume !!!
-                      </Link>
+                      </span>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

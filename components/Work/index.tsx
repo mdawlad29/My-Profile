@@ -47,7 +47,7 @@ const WorkSection = () => {
             <div className="relative h-full overflow-hidden rounded-xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-400/20">
               <div className="relative h-56 overflow-hidden">
                 <Image
-                  src="/default-fallback-image.png"
+                  src={item?.image ?? "/default-fallback-image.png"}
                   alt="Project 1"
                   width={400}
                   height={400}
@@ -67,7 +67,7 @@ const WorkSection = () => {
                     </div>
 
                     <div className="rounded-full bg-white/10 px-3 py-1 text-xs text-white backdrop-blur-md">
-                      2022 - 2023
+                      {item?.creationDate}
                     </div>
                   </div>
                 </div>
@@ -75,15 +75,16 @@ const WorkSection = () => {
 
               <div className="p-6 relative">
                 <div className="mb-3 flex flex-wrap gap-2">
-                  <span className="rounded-md border border-blue-400/30 bg-blue-400/10 px-2 py-1 text-xs text-blue-300 backdrop-blur-sm">
-                    React
-                  </span>
-                  <span className="rounded-md border border-blue-400/30 bg-blue-400/10 px-2 py-1 text-xs text-blue-300 backdrop-blur-sm">
-                    React
-                  </span>
-                  <span className="rounded-md border border-blue-400/30 bg-blue-400/10 px-2 py-1 text-xs text-blue-300 backdrop-blur-sm">
-                    React
-                  </span>
+                  {Array.isArray(item?.language)
+                    ? item.language.map((lang, i) => (
+                        <span
+                          key={i}
+                          className="rounded-md border border-blue-400/30 bg-blue-400/10 px-2 py-1 text-xs text-blue-300 backdrop-blur-sm"
+                        >
+                          {lang}
+                        </span>
+                      ))
+                    : null}
                 </div>
 
                 <h3 className="mb-2 text-xl font-bold text-white transition-colors duration-300 group-hover:text-blue-400">
@@ -96,9 +97,9 @@ const WorkSection = () => {
                 </p>
 
                 <div className="flex items-center justify-between text-sm text-gray-400">
-                  <div className="flex items-center gap-1 transition-transform group-hover:translate-x-1">
+                  <div className="flex items-center capitalize gap-1 transition-transform group-hover:translate-x-1">
                     <LuCircleUserRound />
-                    <span>Media365 Ltd.</span>
+                    <span>{item?.author}</span>
                   </div>
 
                   <Link
