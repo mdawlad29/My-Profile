@@ -40,7 +40,7 @@ export const SocialConnect = () => {
 const SocialItems = ({
   url,
   icon,
-  className,
+  className = "",
 }: {
   url: string;
   icon: React.ReactNode;
@@ -48,9 +48,10 @@ const SocialItems = ({
 }) => {
   return (
     <Link
-      target="_blank"
       href={url}
-      className={`flex justify-center items-center text-[24px] duration-300 ease-in-out  hover:!text-white hover:bg-blue-700 text-blue-700 w-full py-2 border-b border-gray-700/50 last:border-b-0 ${className}`}
+      passHref
+      target="_blank"
+      className={`flex justify-center items-center text-[24px] duration-300 ease-in-out hover:!text-white hover:bg-blue-700 text-blue-700 w-full py-2 border-b border-gray-700/50 last:border-b-0 ${className}`}
     >
       {icon}
     </Link>
