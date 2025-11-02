@@ -78,7 +78,7 @@ export const allProjects = [
     image: "/images/e-learning.png",
     author: "Self Project",
     language: ["Angular", "TypeScript", "Tailwind CSS"],
-    link: "https://e-tutor-learning.vercel.app/",
+    link: "https://e-tutor-online-course-platform.vercel.app/",
     creationDate: "2025",
   },
   {
